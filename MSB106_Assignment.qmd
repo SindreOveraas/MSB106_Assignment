@@ -1,0 +1,47 @@
+---
+title: "MSB106_Assignment"
+author: "Sindre H. Øveraas, Alen Colakovic, Mona Lisa Jones & Sebastian M. Fløysand"
+format:
+ pdf:
+  fontsize: "10"
+  documentclass: article
+  margin-left: 2cm
+  margin-right: 2cm
+papersize: A4
+editor: visual
+---
+
+```{r, message=FALSE}
+library(rgdal)
+library(dplyr)
+library(RSQLite)
+library(sf)
+library(tidyverse)
+library(readr)
+```
+
+```{r, message=FALSE}
+NOR_CBD <- read_csv("NOR_CBD.csv")
+Dist_CBD_Dentist <- read_csv("Dist_CBD_Dentist.csv")
+Buffer_CBD <- read_csv("Buffer_CBD.csv")
+Dist_Mal_Dentist <- read.csv("Dist_Mal_Dentist.csv")
+NOR_OSM_SHOP_MAL <- read.csv("NOR_OSM_SHOP_MAL.csv")
+Buffer_den <- read.csv("Buffer_den.csv")
+NOR_KOMM <- read_csv("NOR_KOMM.csv")
+NOR_KOMM_2 <- read_csv("NOR_KOMM_2.csv")
+```
+
+```{r}
+Commune_Data <- inner_join(NOR_KOMM, NOR_KOMM_2, by = "kommunenummer") |>
+  select(kommunenummer, HubName, HubDist, Turnover_capita_retail_Omsetning)
+```
+
+```{r}
+
+```
+
+## Theoretical Foundation of Hypothesis
+
+## Data description
+
+## Econometric approach
