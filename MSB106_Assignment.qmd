@@ -37,7 +37,8 @@ Commune_Data <- inner_join(NOR_KOMM, NOR_KOMM_2, by = "kommunenummer") |>
 ```
 
 ```{r}
-
+Dentist_Data <- inner_join(Dist_Mal_Dentist, Dist_CBD_Dentist, by = "fid") |>
+  select(fid, Juridisk.n, Antall.ans, Sum.Drifts, Sum.salgsi)
 ```
 
 ## Theoretical Foundation of Hypothesis
