@@ -1,5 +1,5 @@
 ---
-title: "MSB106_Assignment"
+title: "MSB106 - Assignment"
 author: "Sindre H. Øveraas, Alen Colakovic, Mona Lisa Jones & Sebastian M. Fløysand"
 format:
  pdf:
@@ -18,6 +18,8 @@ library(RSQLite)
 library(sf)
 library(tidyverse)
 library(readr)
+library(ggplot2)
+library(kableExtra)
 ```
 
 ```{r, message=FALSE}
@@ -33,13 +35,14 @@ NOR_KOMM_2 <- read_csv("NOR_KOMM_2.csv")
 
 ```{r}
 Commune_Data <- inner_join(NOR_KOMM, NOR_KOMM_2, by = "kommunenummer") |>
-  select(kommunenummer, HubName, HubDist, Turnover_capita_retail_Omsetning)
+  select(kommunenummer, HubName, HubDist, Turnover_capita_retail_Omsetning) |>
+  rename("knr" = kommunenummer, "DistMal" = HubDist, "HubNameMal" = HubName, "Turnover_capita_retail" = Turnover_capita_retail_Omsetning)
 ```
 
 ```{r}
 Dentist_Data <- inner_join(Dist_Mal_Dentist, Dist_CBD_Dentist, by = "fid") |>
   select(fid, Juridisk.n, Antall.ans, Sum.Drifts, Sum.salgsi, Driftsresu.y, osm_id.y, latlong.y, HubName.y, HubDist.y, HubName.x, HubDist.x) |>
-  rename("DistMal" = HubDist.x, "DistCBD" = HubDist.y, "HubNameMal" = HubName.x, "HubNameCBD" = HubName.y)
+  rename("DistMal" = HubDist.x, "DistCBD" = HubDist.y, "HubNameMal" = HubName.x, "HubNameCBD" = HubName.y, "Driftsres" = Driftsresu.y, "osm_id" = osm_id.y, "latlong" = latlong.y)
 ```
 
 ## Introduction
@@ -51,5 +54,60 @@ As an example, central questions in this assignment will be; "Is it more benefic
 ## Theoretical Foundation of Hypothesis
 
 ## Data description
+
+```{r}
+kable(summary(Commune_Data))
+```
+
+```{r}
+kable(summary(Dentist_Data[3:12]))
+```
+
+```{r}
+Commune_Data |>
+  ggplot(aes(x = DistMal, y = Turnover_capita_retail, colour = DistMal)) +
+  geom_point(lwd = .9) +
+  labs(x = "Distance from Mall", y = "Turnover capita in retail per inhabitant") +
+  theme_bw()
+```
+
+Might be more appropriate to explore the distance from CBDs to Malls compared to turnover capita in retail per inhabitant, rather than the distance from the geographical centroid of Norwegian Communes, because of the tendency of bigger population density around CBDs.
+
+```{r}
+Dentist_Data |>
+  ggplot(aes(x = DistCBD, y = Sum.salgsi, colour = DistCBD)) +
+  geom_point(lwd = .9) +
+  labs(x = "Distance from CBD", y = "Income") +
+  theme_bw()
+```
+
+```{r}
+Dentist_Data_LIMIT <- Dentist_Data |>
+  filter(Sum.salgsi < 100000000, DistCBD < 250,
+         Driftsres < 20000000, Driftsres > -10000000, DistMal < 80)
+```
+
+```{r}
+Dentist_Data_LIMIT |>
+  ggplot(aes(x = DistCBD, y = Sum.salgsi, colour = DistCBD)) +
+  geom_point(lwd = .9) + labs(x = "Distance from CBD", y = "Income") +
+  theme_bw()
+```
+
+```{r}
+Dentist_Data |>
+  ggplot(aes(x = DistMal, y = Driftsres, colour = DistMal)) +
+  geom_point(lwd = .9) +
+  labs(x = "Distance from Mall", y = "EBIT") +
+  theme_bw()
+```
+
+```{r}
+Dentist_Data_LIMIT |>
+  ggplot(aes(x = DistMal, y = Driftsres, colour = DistMal)) +
+  geom_point(lwd = .9) +
+  labs(x = "Distance from Mall", y = "EBIT") +
+  theme_bw()
+```
 
 ## Econometric approach
