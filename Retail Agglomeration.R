@@ -104,14 +104,11 @@ In order to construct the model, the following assumptions are taken into accoun
 
 The adopted bid-rent model includes one major difference, whereas the original model the land and non-land production factors relationships are fixes, land and non-land production factors are assumed to be mutually substitutable inputs, irrespective of whether the firm produces agriculture or a manufactured good (McCann, 2013).
 
-Bilde av modellen
-
 Rent obtained in the model is the remainder left after transport, production costs and profit has been subtracted from revenues.
-The rent gradient is a negatively sloped straight line and has an intercept with
-the vertical axis of maximum value of rent.
+The rent gradient is a negatively sloped straight line and has an intercept with the vertical axis of maximum value of rent.
 Furthermore, it has an intercept with the horizontal axis whereas land value is nil.
 The slope is reflecting a trade-off between transport cost and rent.
- The llustration shows three categories: retail-, manufacturing- and residential units, each serving a specific purpose.
+The llustration shows three categories: retail-, manufacturing- and residential units, each serving a specific purpose.
 The rent realized by the landowner is the envelope of the three rent supply curves.
 
 **Analysis**
