@@ -26,7 +26,7 @@ years to come in the Haugaland-region?
 
 ## Literature Review
 
-#### Shopping Mall literature
+#### Previous literature on Shopping malls
 
 #### 
 Theoretical Framework
@@ -77,7 +77,7 @@ The bid-rent model has since been associated with the works of Alsonso (1964,197
 Further development has been implemented by authors such as Mills (1969, 1970), Muth (1969), and Evans (1973).
 Ensuing the model can be applied in a broader setting than the original Thunen model (McCann, 2013). 
 
-**The Bid-rent model**
+**Assumtions**
 
 The bid rent model is a simple theory to explain urban structure.
 In order to construct the model, the following assumptions are taken into account.
@@ -104,6 +104,8 @@ In order to construct the model, the following assumptions are taken into accoun
 
 The adopted bid-rent model includes one major difference, whereas the original model the land and non-land production factors relationships are fixes, land and non-land production factors are assumed to be mutually substitutable inputs, irrespective of whether the firm produces agriculture or a manufactured good (McCann, 2013).
 
+*(Bilde / illustasjon av mdellen)*
+
 Rent obtained in the model is the remainder left after transport, production costs and profit has been subtracted from revenues.
 The rent gradient is a negatively sloped straight line and has an intercept with the vertical axis of maximum value of rent.
 Furthermore, it has an intercept with the horizontal axis whereas land value is nil.
@@ -111,7 +113,7 @@ The slope is reflecting a trade-off between transport cost and rent.
 The llustration shows three categories: retail-, manufacturing- and residential units, each serving a specific purpose.
 The rent realized by the landowner is the envelope of the three rent supply curves.
 
-**Analysis**
+**Interpretation of the model**
 
 A more central location implies a willingness to pay higher rents due to lower transport costs and higher revenues.
 Likewise, a suburban location yields the same profit if and only if less rent is paid for land.
