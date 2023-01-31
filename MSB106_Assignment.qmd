@@ -60,7 +60,11 @@ kable(summary(Commune_Data))
 ```
 
 ```{r}
-kable(summary(Dentist_Data[3:12]))
+kable(summary(Dentist_Data[3:6]))
+```
+
+```{r}
+kable(summary(Dentist_Data[8:12]))
 ```
 
 ```{r}
