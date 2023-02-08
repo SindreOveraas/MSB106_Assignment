@@ -1,145 +1,161 @@
 ---
 title: "Regional and Urban Economics"
-subtitle: Retail Agglomeration
+subtitle: Dental industry
 author: "Sindre Halvorsen Øveraas , Sebastian Mena Fløysand, Alen Colakovic & Mona Lisa Jones"
-format: pdf
-  html: default
-  pdf: default
+format:
+ pdf:
+  fontsize: "10"
+  documentclass: article
+  margin-left: 2cm
+  margin-right: 2cm
+papersize: A4
 editor: visual
-execute: 
-  echo: true
+bibliography: references.bib
 ---
 
 ## Abstract
 
 ## Introduction
 
+Our main task in this assignment is to perform an analysis of geospatial determinants of firm activity.
+More specifically we are to focus on the Norwegian dental industry in this regard, and see how geospatial determinants such as distances to shopping malls and CBDs (Central Business Districts), as well as population density can determine dental businesses income and general financial operations.
+As an example, central questions in this assignment will be; "Is it more beneficial to be highly centralized in urban areas with high population density and many competitors, or is it a greater advantage to be less centralized to the advantage that the nearest competing company is considerably further away?", "Which determinants appear to be most significant for economic benefit?"
+
 **Hypothesis**
 
-The location choice of firms providing service to end
-consumers, significantly determine their ultimate growth potential.
+The location choice of firms providing service to end consumers, significantly determine their ultimate growth potential.
 
 **Research question**
 
-What is the most profitable location for dental practice in
-years to come in the Haugaland-region?
+What is the most profitable location for dental practice?
 
 ## Literature Review
 
 #### Previous literature on Shopping malls
 
 #### 
-Theoretical Framework
 
-**Central place Theory**
+#### Theoretical Framework
+
+**Marshall's agglomeration principles**
+
+Marshall (1920) broadly divides externalities within agglomeration in three main categories with potential to drive sales.
+Firstly, *knowledge spill over* within industries or product specific technological knowledge.
+Furthermore, *market transactions* in terms of value chain transactions with industry-specialized buyers and suppliers.
+Lastly, *competition* for specialized production factors such as labour and product market competition @nielsen2021.
+
+**The hotelling model of spatial competition**
+
+Hotelling's (1929) theory of market area model will be applied to look at how the dental industry geographical location placements in the market area, to reach the profit-maximizing equilibrium @mccann2013.
+
+**Alonso model**
+
+The model demonstrate geographical locations tied up to the Alonso's model (1960), which is an urbanized formulation of the nineteenth century von Thünen model @capello2015.
+Moreover, indicating where the most profitable location for dental practise might be.
+A more central location implies a willingness to pay higher rents due to lower transport costs and higher revenues @capello2015.
+Likewise, non-central location yields the same profit if and only if less rent is paid for land @capello2015.
+The bid-rent curve will in this case demonstrate the prise of rent within financial locations, Retail locations, and industrial locations.
+
+**Gravitational models ?**
 
 **Retail Agglomeration and Economies of Shopping Centres**
 
 Town and cities have long had shopping districts in which stores are concentrated.
-To some extent such centre points were the result of uncoordinated store-location decisions (Brueckner, 2011).
-Nevertheless, not coincidentally as the concentration of retail stores can be explained by a market desire to create a Nash equilibrium.
-At this point all retailers expected outcome cannot be improved by changing position (Hotelling 1929).
+To some extent such centre points were the result of uncoordinated store-location decisions @brueckner2011.
+Nevertheless, not coincidentally according to Hotelling theory (1929).
+He describes the concentration of retail stores by a market desire to create a Nash equilibrium.
+At this point all retailers expected sales maximisation outcome cannot be improved by changing position.
 Contradictory to the assumption that consumers will shop at the nearest retailer, they are willing to travel significantly further to reach certain central places.
-Shopping malls are often located
-outside the city centre.
-Sometimes they challenge the existence of the city centre.
-In extraordinary circumstances they can be seeds for new urban centres.
-Not so hard to understand taken into consideration that shopping malls provide most goods and services given downtown.
-Not to mention, the convenience of free parking, longer opening hours and easy road access.
-Especially, if the malls
-cater for cinemas, restaurants, bars and other attributes in conjunction with downtown.
-Occasionally, perceived as \"predatory malls\" which are purposely built to take over the local retail market.
-Owners of shopping malls \"orchestrate\" the process of retail agglomeration that happens naturally in towns and cities (Brueckner, 2011).
-The agglomeration in centre points contributes several benefits for the consumers.
-First of all, they save time and money.
-When the consumers visit multiple stores to make a variety of purchases, the cost of the overall shopping trip is subsequently reduced (Brueckner, 2011).
-Secondly, comparison shopping as consumers prefer to compare products to achieve a better purchase decision. 
-Again, resulting in clusters in order to achieve higher shopping benefits than isolated stores.
-Consequently, leading to more customer traffic and increased price competition between stores selling
-similar products (Brueckner, 2011).
-The fact that owners of stores seem to prefer highly concentrated shopping areas suggests that the beneficials outweigh the loss attributable in terms of greater price competition.
-\"The benefits of agglomeration can be viewed as arising from inter-store externalities\" (Brueckner, 2011).
-For example, shoppers visiting the Winemonopoly in a mall may also visit a clothing store, and even find it beneficial to use public services at the same time.
-Anchor-stores such as the Winemonopoly which are few and far in between due to regulation by the governments, bring in a
-higher volume of customers.
-They can also be used as a tool in rare cases such as prevention of the death of city centre.
-When retail agglomeration is orchestrated by the owner of a shopping mall, the strength and the direction of such externalities are taken into account (Brueckner, 2011).
+
+Marshall (1920) points out another explanation for this in his seminal work on agglomeration.
+That being, intra-industry knowledge spillovers as mechanisms leading to formation of industry cluster @nielsen2021.
+In this case the dental industry information spillovers are bounded in geographical space.
+Hence, the need to locate in close proximity.
+That being the latest equipment, in order to work faster or the right personnel to attract more patients.
+Another way to drive sales in this area could be by dentist specialisation and patients referrals between dentists.
+
+Another important externalities expressed in Marshall (1920) theory is market transactions.
+Whereas, geographical proximity reduces transaction cost through several mechanism @nielsen2021.
+The market transactions can be extended to the endogenous location of specialized human capital @nielsen2021.
+"It is well known among economists and other social scientists that large cities have disproportionately large shares of highly educated workers, and the trend has been growing in recent decades." @baker Presumably, larger cities would then be more attractive to dentists in terms of cost and quality of specialised labour in smaller towns.
+Especially, those trying to achieve spatial monopoly end up loosing profit by overpaying for labour or in worst case scenario not finding enough dentists labour and end up compromising on quality.
+In both cases growth potential would be compromised.
+
+Marshal also points out the competition within the geographical location.
+Hence, the marketplace and business districts give consumers low search and switching costs @capello2015.
+The fact that owners of stores seem to prefer highly concentrated shopping.
+More-so, it suggests that the sales volumes outweigh the loss attributed to greater price competition.
+
+**Shopping Malls**
+
+Owners of shopping malls "orchestrate" the process of retail agglomeration that happens naturally in towns and cities @brueckner2011.
+Naturally, the same retail agglomeration and Nash equilibrium may occur in shopping malls if not more intensely as the shops are in closer proximity.
+Furthermore, the potential for more knowledge spillovers, higher volume of market transaction and more competition.
+
+When retail agglomeration is orchestrated by the owner of a shopping mall, the strength and direction of such externalities are taken into account @brueckner2011.
 Much so, because the price of rent is dependent on the overall revenue of a shopping mall.
-Hence, the owner of the mall will want to choose the mix of stores and their sizes taking these externalities, attributes and anchor stores attractiveness into account (Brueckner, 2011).
+Hence, the owner of the mall wants to choose the mix of stores and their sizes taking these externalities, attributes and anchor stores attractiveness into account @brueckner2011.
 
-(Lime tekst price of houses around shopping malls / realestate market effects)
+The Norwegian retail market for alcoholic beverages is controlled by the state monopoly.
+Anchor-stores such as the Wine-monopoly bring in a higher volume of consumers @lai2013.
+For example, shoppers visiting the Wine-monopoly in a mall may also visit a clothing store, and even find it beneficial to use public services at the same time.
+Nevertheless, they are limited in numbers and needs government approval.
+Each municipality must apply to get the wine monopoly in their area.
+One of the factors considered in this process is the death of city centre.
+A possible reason for this is so called "predatory malls" which are purposely built to overtake the exciting local market.
+Especially if the mall cater for cinema, restaurants, bars and other attributes in conjunction with the city centre.
+Not to mention the upper hand of easy road access and free parking.
 
-**The bid-rent model**
+**Urban location of dentist; The Alonso model (1960)**
 
-The bid rent model was first introduced by the German social economist Johann Heinrich von Thünen in 1826.
-It was initially used as an agricultural model to measure how much land is employed in productive activities, and how land can be allocated between competing users (McCann, 2013). 
-The bid-rent model has since been associated with the works of Alsonso (1964,1971).
-Further development has been implemented by authors such as Mills (1969, 1970), Muth (1969), and Evans (1973).
-Ensuing the model can be applied in a broader setting than the original Thunen model (McCann, 2013). 
+The bid rent model is a simple theory to explain urban structure @capello2015.
+The model assumes a uniformed space where all land is equally fertile, and transport is identical in all directions, with a single specific marketplace the town or city centre in this case @capello2015.
+According to @capello2015 the model also assumes that demand is unlimited in other words it is supply-orientated.
+Additionally, the production factors are perfectly distributed in space, not uneven spatial distribution @capello2015.
+Furthermore, demonstrating a specific production function with fixed coefficients and constant returns to scale @capello2015.
+The last assumptions are perfect competition in the marketplace and that the unit transport costs are constant in space @capello2015.
+Rent obtained in the model is the remainder left after transport, production costs and profit has been subtracted from revenues @capello2015.
 
-**Assumtions**
+![](images/bidrent-01.png)
 
-The bid rent model is a simple theory to explain urban structure.
-In order to construct the model, the following assumptions are taken into account.
+The illustration shows three categories: closest to the centre the bank and finance districts with the most expensive rent.
+Followed by the retail agglomeration areas and industrial sites furthest away from the central point.
+Dental practices are service orientated thus depending on population and central activities.
+Opening hours are relay outside of office hours.
+Production cost does not appear to be important in this case since dentist is a public service and not dependent of regular transportation of sales goods.
+The rent realized by the landowner is the envelope of the three rent supply curves @capello2015.
+From a Marshall's way of thinking dentists should cluster somewhere in this pink area to reap maximum benefits from the agglomeration.
+The attendances to break out of the clusters support Hotelling game theory of spatial competition which suggests that the spatial monopoly power provides an incentive for firms to use location as a competitive weapon to achieve spatial monopoly @mccann2013.
 
--   A uniformed space where all land is equally fertile, and transport is identical in all directions.
+**Teori om utvalgt region?**
 
--   A single, specific marketplace
+## Methodology
 
--   Demand is unlimited; the model is supply-orientated.
+In quantitative studies this section provides details about dataset, variables, instruments and measurement procedures used in the study.
+If the data was collected by the authors this section will describe how the sample was collected.
+If specific instruments were constructed to collect the data they will be described here and included in the appendix.
+Procedures used to measure variables are often described in sufficient detail to permit replication.
 
--   The production factors are perfectly distributed in space, not uneven spatial distribution.
+In economic papers, this section describes the empircal model and estimation strategy used by the authors.
 
--   A specific production function with fixed coefficients and constant returns to scale
+#### Data description
 
--   Perfect competition exists in agricultural goods market.
+(Data and how it was collected)
 
--   Unit transport costs are constant in space: total transport cost depends on:
+**SEDA (Spatial Explanatory Data Analyses)**
 
-    A\) The distance between the production site and the town
+Spatial data analysis is a rapidly growing area in Statistics @haslett1992.
+The Journal of the statistics society define such data as being objects in space, which objects have physical location.
+Furthermore, the analyses are spatial if these locations are relevant to the interpretation of the data @haining1998.
+"Invariably the examination of the data involves the examination of some form of map; often it will involve little more. Graphical techniques for examining such maps are thus a central part of the methodology. A number of such techniques are discussed." @haslett1992
 
-    B\) The volume of production
+#### Empirical Specification
 
-**The bid-rent model for a firm**
+#### Econometric Approach
 
-The adopted bid-rent model includes one major difference, whereas the original model the land and non-land production factors relationships are fixes, land and non-land production factors are assumed to be mutually substitutable inputs, irrespective of whether the firm produces agriculture or a manufactured good (McCann, 2013).
+#### Estimation strategy
 
-*(Bilde / illustasjon av mdellen)*
-
-Rent obtained in the model is the remainder left after transport, production costs and profit has been subtracted from revenues.
-The rent gradient is a negatively sloped straight line and has an intercept with the vertical axis of maximum value of rent.
-Furthermore, it has an intercept with the horizontal axis whereas land value is nil.
-The slope is reflecting a trade-off between transport cost and rent.
-The llustration shows three categories: retail-, manufacturing- and residential units, each serving a specific purpose.
-The rent realized by the landowner is the envelope of the three rent supply curves.
-
-**Interpretation of the model**
-
-A more central location implies a willingness to pay higher rents due to lower transport costs and higher revenues.
-Likewise, a suburban location yields the same profit if and only if less rent is paid for land.
-
-Furthermore, the saving on land cost must offset the higher transport costs and the lower revenues.
-At one unit of distance further away from the centre, the rent offered to maintain the same level of profit, diminishes because of increased transport cost and decreased revenues.
-
-(Retail Demand, Marshall
-
-Anchor tenant externalities
-
-Infrastructure
-
-Commuters
-
-Hotelling's law
-
-Single purpose shopping
-
-Multi-purpose shopping
-
-Retail lease valuation
-
-(Relly's law))
-
-## Data
+#### Analytical framework
 
 ## Results
 
