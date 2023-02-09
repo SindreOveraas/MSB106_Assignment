@@ -28,7 +28,8 @@ Dist_CBD_Dentist <- read_csv("Dist_CBD_Dentist.csv")
 Zonal_CBD <- read_csv("Zonal_CBD.csv")
 Dist_Mal_Dentist <- read.csv("Dist_Mal_Dentist.csv")
 NOR_OSM_SHOP_MAL <- read.csv("NOR_OSM_SHOP_MAL.csv")
-Zonal_Den <- read.csv("Zonal_Den.csv")
+Zonal_Den <- read.csv("Zonal_Den.csv") |>
+  select(fid, X_sum)
 NOR_KOMM <- read_csv("NOR_KOMM.csv")
 NOR_KOMM_2 <- read_csv("NOR_KOMM_2.csv")
 ```
@@ -43,6 +44,10 @@ Commune_Data <- inner_join(NOR_KOMM, NOR_KOMM_2, by = "kommunenummer") |>
 Dentist_Data <- inner_join(Dist_Mal_Dentist, Dist_CBD_Dentist, by = "fid") |>
   select(fid, Juridisk.n, Antall.ans, Sum.Drifts, Sum.salgsi, Driftsresu.y, osm_id.y, latlong.y, HubName.y, HubDist.y, HubName.x, HubDist.x) |>
   rename("DistMal" = HubDist.x, "DistCBD" = HubDist.y, "HubNameMal" = HubName.x, "HubNameCBD" = HubName.y, "Driftsres" = Driftsresu.y, "osm_id" = osm_id.y, "latlong" = latlong.y)
+```
+
+```{r}
+Dentist_Data <- inner_join(Dentist_Data, Zonal_Den, by = "fid")
 ```
 
 ## Introduction
