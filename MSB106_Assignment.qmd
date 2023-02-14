@@ -20,6 +20,7 @@ library(tidyverse)
 library(readr)
 library(ggplot2)
 library(kableExtra)
+library(huxtable)
 ```
 
 ```{r, message=FALSE}
@@ -117,6 +118,15 @@ Dentist_Data_LIMIT |>
   geom_point(lwd = .9) +
   labs(x = "Distance from Mall", y = "EBIT") +
   theme_bw()
+```
+
+```{r}
+lm1 <- lm(Sum.salgsi ~ X_sum, data = Dentist_Data_LIMIT)
+lm2 <- lm(Sum.salgsi ~ DistCBD + DistMal + X_sum, data = Dentist_Data_LIMIT)
+```
+
+```{r}
+huxreg(list("Model 1" = lm1, "Model 2" = lm2), statistics = c(N = "nobs", R2 = "r.squared"), const. = "(Intercept)", note = "Note: {stars} T statistics in brackets.")
 ```
 
 ## Econometric approach
