@@ -35,23 +35,23 @@ What is the most profitable location for dental practice?
 
 #### 
 
-#### Theoretical Framework
+### Theoretical Framework
 
 **Marshall's agglomeration principles**
 
-Marshall (1920) broadly divides externalities within agglomeration in three main categories with potential to drive sales.
+Marshall (1920) broadly divides externalities within agglomeration in three main categories.
 Firstly, *knowledge spill over* within industries or product specific technological knowledge.
 Furthermore, *market transactions* in terms of value chain transactions with industry-specialized buyers and suppliers.
 Lastly, *competition* for specialized production factors such as labour and product market competition @nielsen2021.
 
 **The hotelling model of spatial competition**
 
-Hotelling's (1929) theory of market area model will be applied to look at how the dental industry geographical location placements in the market area, to reach the profit-maximizing equilibrium @mccann2013.
+Hotelling's (1929) theory of market area model will be applied to look at how the dental industry geographical location placements in the market area, to reach the profit-maximizing equilibrium.
 
 **Alonso model**
 
-The model demonstrate geographical locations tied up to the Alonso's model (1960), which is an urbanized formulation of the nineteenth century von Thünen model @capello2015.
-Moreover, indicating where the most profitable location for dental practise might be.
+Furthermore, geographical locations tied up to **Alonso's model (1960)**, an urbanized formulation of the nineteenth century von Thünen model.
+Moreover, indicating where the optimal location for dental practise might be.
 A more central location implies a willingness to pay higher rents due to lower transport costs and higher revenues @capello2015.
 Likewise, non-central location yields the same profit if and only if less rent is paid for land @capello2015.
 The bid-rent curve will in this case demonstrate the prise of rent within financial locations, Retail locations, and industrial locations.
@@ -64,27 +64,23 @@ Town and cities have long had shopping districts in which stores are concentrate
 To some extent such centre points were the result of uncoordinated store-location decisions @brueckner2011.
 Nevertheless, not coincidentally according to Hotelling theory (1929).
 He describes the concentration of retail stores by a market desire to create a Nash equilibrium.
-At this point all retailers expected sales maximisation outcome cannot be improved by changing position.
+At this point all retailers expected outcome cannot be improved by changing position.
 Contradictory to the assumption that consumers will shop at the nearest retailer, they are willing to travel significantly further to reach certain central places.
 
 Marshall (1920) points out another explanation for this in his seminal work on agglomeration.
 That being, intra-industry knowledge spillovers as mechanisms leading to formation of industry cluster @nielsen2021.
 In this case the dental industry information spillovers are bounded in geographical space.
 Hence, the need to locate in close proximity.
-That being the latest equipment, in order to work faster or the right personnel to attract more patients.
-Another way to drive sales in this area could be by dentist specialisation and patients referrals between dentists.
 
 Another important externalities expressed in Marshall (1920) theory is market transactions.
 Whereas, geographical proximity reduces transaction cost through several mechanism @nielsen2021.
 The market transactions can be extended to the endogenous location of specialized human capital @nielsen2021.
-"It is well known among economists and other social scientists that large cities have disproportionately large shares of highly educated workers, and the trend has been growing in recent decades." @baker Presumably, larger cities would then be more attractive to dentists in terms of cost and quality of specialised labour in smaller towns.
-Especially, those trying to achieve spatial monopoly end up loosing profit by overpaying for labour or in worst case scenario not finding enough dentists labour and end up compromising on quality.
-In both cases growth potential would be compromised.
+Presumably, larger cities would be more attractive to dentists compromising cost and quality of specialised labour, should demand in smaller towns or cities not be met.
 
 Marshal also points out the competition within the geographical location.
 Hence, the marketplace and business districts give consumers low search and switching costs @capello2015.
 The fact that owners of stores seem to prefer highly concentrated shopping.
-More-so, it suggests that the sales volumes outweigh the loss attributed to greater price competition.
+More-so, it suggests that the beneficial outweigh the loss attributed to greater price competition.
 
 **Shopping Malls**
 
@@ -127,35 +123,9 @@ The rent realized by the landowner is the envelope of the three rent supply curv
 From a Marshall's way of thinking dentists should cluster somewhere in this pink area to reap maximum benefits from the agglomeration.
 The attendances to break out of the clusters support Hotelling game theory of spatial competition which suggests that the spatial monopoly power provides an incentive for firms to use location as a competitive weapon to achieve spatial monopoly @mccann2013.
 
-**Teori om utvalgt region?**
+#### Teori om utvalgt region?
 
-## Methodology
-
-In quantitative studies this section provides details about dataset, variables, instruments and measurement procedures used in the study.
-If the data was collected by the authors this section will describe how the sample was collected.
-If specific instruments were constructed to collect the data they will be described here and included in the appendix.
-Procedures used to measure variables are often described in sufficient detail to permit replication.
-
-In economic papers, this section describes the empircal model and estimation strategy used by the authors.
-
-#### Data description
-
-(Data and how it was collected)
-
-**SEDA (Spatial Explanatory Data Analyses)**
-
-Spatial data analysis is a rapidly growing area in Statistics @haslett1992.
-The Journal of the statistics society define such data as being objects in space, which objects have physical location.
-Furthermore, the analyses are spatial if these locations are relevant to the interpretation of the data @haining1998.
-"Invariably the examination of the data involves the examination of some form of map; often it will involve little more. Graphical techniques for examining such maps are thus a central part of the methodology. A number of such techniques are discussed." @haslett1992
-
-#### Empirical Specification
-
-#### Econometric Approach
-
-#### Estimation strategy
-
-#### Analytical framework
+## Data
 
 ## Results
 
