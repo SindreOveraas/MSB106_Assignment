@@ -9,6 +9,7 @@ format:
   margin-right: 2cm
 papersize: A4
 editor: visual
+bibliography: references.bib
 ---
 
 ```{r, message=FALSE}
@@ -51,6 +52,8 @@ Dentist_Data <- inner_join(Dist_Mal_Dentist, Dist_CBD_Dentist, by = "fid") |>
 Dentist_Data <- inner_join(Dentist_Data, Zonal_Den, by = "fid")
 ```
 
+**Abstract**
+
 ## Introduction
 
 Our main task in this assignment is to perform an analysis of geospatial determinants of firm activity.
@@ -59,12 +62,20 @@ As an example, central questions in this assignment will be; "Is it more benefic
 
 ## Theoretical Foundation of Hypothesis
 
+**Hypothesis & Research question**
+
+The location choice of firms providing service to end consumers, significantly determine their ultimate growth potential.
+
+What is the most profitable location for dental practice?
+
+**Location Theory**
+
 Location theory gives regional economics its scientific disciplinary identity and constitutes its theoretical methodological core @capello2011.
 It has typically microeconomic foundation and uses theoretical models as well as adopting a statistical and geographical approach @capello2011.
-Furthermore, the theory uses the concept of externalities as disparities in the spatial distubution of activities, thereby laying the territorial bases for dynamic approaches @capello2011.
+Furthermore, the theory uses the concept of externalities as disparities in the spatial distribution of activities, thereby laying the territorial bases for dynamic approaches @capello2011.
 
 Regional growth theory involves spatial aspects of economic growth and territorial distribution of income @capello2011.
-It also involves generatating geographical advantages, in terms of easy or difficult access of a particular area @capello2011.
+It also involves generating geographical advantages, in terms of easy or difficult access of a particular area @capello2011.
 
 Harald Hotelling's locational equilibrium is determined by a logic of profit maximization whereby each producer controls its own market area.
 Productivity advantages of cities and urban clusters with a high density of firms increase profit by attracting a larger number of potential customers, and more productive workers @capello2011.
@@ -78,7 +89,7 @@ A generalized Models based on Newton law of gravity can be applied to estimate f
 The model of potential has the capacity to measure the potential of attractiveness to a place.
 Furthermore, predicting places of future growth potential for firms, shopping malls or public service more specifically dentist practice @capello2015.
 
-**Interdependent location choice, the Hotelling model (1929)**
+**Interdependent location choice, the Hotelling's model (1929)**
 
 The model assume that given the location of producers, and given demand uniformly distributed geographically (in linear or circular form) the market is divided into areas within each of which there operates a single firm in a duopoly environment.
 Furthermore, no relocation costs and demand only depend on location choice @capello2015.
@@ -90,7 +101,7 @@ The end of the game is the position where neither can increase sales volume by m
 
 A simple explanation of why two dentists providing the same service, at the same price might locate next to each other.
 Nevertheless, despite increasing the transportation cost for patients.
-Perhaps the simplest way to explain why there is a natural tendency for retailers to cluster in space; a tendency which may help explain the excistance of larger agglomerations.
+Perhaps the simplest way to explain why there is a natural tendency for retailers to cluster in space; a tendency which may help explain the existence of larger agglomerations.
 
 **Marshall's agglomeration principles**
 
@@ -99,28 +110,19 @@ Firstly, knowledge spill over within industries or product specific technologica
 Furthermore, market transactions in terms of value chain transactions with industry-specialized buyers and suppliers.
 Lastly, competition for specialized production factors such as labour and product market competition Nielsen et al. (2021).
 
-There are solidly established conclusions regarding the exsistanse of agglomeration economies Puga (2010).
-However, less proof of their estimated magnitude therefore identifying the causes of agglomeration economies is proving more difficult Puga (2010).
-Nevertheless, there is a large theoretical literature that develops these mechanisms Puga (2010).
-Duranton and Puga (2004) discuss these classifications and identify learning, sharing and matching as the main causes of agglomeration economies.
+There are solidly established conclusions regarding the excistanse of agglomeration economies @puga2010. However, less proof of their estimated magnitude therefore identifying the causes of agglomeration economies is proving more difficult @puga2010. Nevertheless, there is a large theoretical literature that develops these mechanisms @puga2010. @duranton2004 discuss these classifications and identify learning, sharing and matching as the main causes of agglomeration economies.
 
-A larger market allows for a more efficient sharing of local infrastructure and facilities, a variety of intermediate input suppliers, or a pool of workers with similar skills Puga (2010).
-Dispite higer rent the dental industry and shopping malls, seams to reap higher benefits in more populated areas as they are dependent on being located where there is a higher volume of patiants to drive sales.
-The attraction for the consumers and users of public facilities is overall cost reduction Puga (2010).
-Hence, the larger the population sharing facilities the lower the cost per user Puga (2010).
-Presumably, industrial factories and business clusters are more dependent on being close to raw materials and industrial action.
+A larger market allows for a more efficient sharing of local infrastructure and facilities, a variety of intermediate input suppliers, or a pool of workers with similar skills @puga2010.. Dispite higer rent the dental industry and shopping malls, seams to reap higher benefits in more populated areas as they are dependent on being located where there is a higher volume of patiants to drive sales.
+The attraction for the consumers and users of public facilities is overall cost reduction @puga2010. Hence, the larger the population sharing facilities the lower the cost per user @puga2010. Presumably, industrial factories and business clusters are more dependent on being close to raw materials and industrial action.
 
-Furthermore, a larger market also allows for a better matching between employers and employees, improved chances of finding suitable and better quality of matches Puga (2010).
-Shopping malls accure skilled workers to drive sales.
-However, they are not so dependent on highly educated workers as dentists whom according to resent study, tend to prefer bigger cities Davis and Dingel (2020).
-More-so, cites provide a constant market for specialized skills and more productive work force Puga (2010).
-Perhaps, a possibility for higher wages being compensated by more efficiant workers in bigger agglomeration economies.
+Furthermore, a larger market also allows for a better matching between employers and employees, improved chances of finding suitable and better quality of matches @puga2010. Shopping malls require skilled workers to drive sales.
+However, they are not so dependent on highly educated workers as dentists whom according to resent study, tend to prefer bigger cities @davis2020Davis. More-so, cites provide a constant market for specialized skills and more productive work force @puga2010. Perhaps, a possibility for higher wages being compensated by more efficient workers in bigger agglomeration economies.
 That said the Norwegian cities might differ from the american cites in the study, as the population and clusters are no where near the same size.
-Lastly, a larger market can also facilitate learning by promoting the development and widespread adaptation of new technologies and business practice Puga (2010).
+Lastly, a larger market can also facilitate learning by promoting the development and widespread adaptation of new technologies and business practice @puga2010.
 
 kladd
 
-*"Interactions with experienced workers helps acquire valuable skills and experienced workers remain in cities to share the rent of this learning process. Besides this purposeful transition of knowledge, the information literature on learning in cities has also emphasized the casual and unintended flow of information facilitated by big cities."* Puga (2010)
+*"Interactions with experienced workers helps acquire valuable skills and experienced workers remain in cities to share the rent of this learning process. Besides this purposeful transition of knowledge, the information literature on learning in cities has also emphasized the casual and unintended flow of information facilitated by big cities."* @puga2010.
 
 **Urban location of dentist; The Alonso model**
 
@@ -220,6 +222,35 @@ Not to mention the upper hand of easy road access and free parking.
 
 ## Data description
 
+`In quantitative studies this section provides details about dataset, variables, instruments and measurement procedures used in the study. If the data was collected by the authors this section will describe how the sample was collected. If specific instruments were constructed to collect the data they will be described here and included in the appendix. Procedures used to measure variables are often described in sufficient detail to permit replication. In economic papers, this section describes the empirical model and estimation strategy used by the authors.`
+
+**Data description**
+
+(Data and how it was collected)
+
+**Empirical Specification**
+
+**Econometric Approach**
+
+**Estimation strategy**
+
+**Analytical framework**
+
+SEDA (Spatial Explanatory Data Analyses)
+
+Spatial data analysis is a rapidly growing area in Statistics @haslett1992. The Journal of the statistics society define such data as being objects in space, which objects have physical location.
+Furthermore, the analyses are spatial if these locations are relevant to the interpretation of the data @haining1998.
+
+The examination of the data involves the examination of data collected from q-gis maps; `it will involve little more. Graphical techniques for examining such maps are thus a central part of the methodology. A number of such techniques are discussed."` @haslett1992.
+
+`What data are used?`
+
+`What has been calculated?`
+
+`What was not used and why?`
+
+`Outlines?`
+
 ```{r}
 kable(summary(Commune_Data))
 ```
@@ -289,3 +320,9 @@ huxreg(list("Model 1" = lm1, "Model 2" = lm2), statistics = c(N = "nobs", R2 = "
 ```
 
 ## Econometric approach
+
+**Result**
+
+**Discussion**
+
+**Conclusion**
