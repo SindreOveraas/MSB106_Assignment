@@ -224,8 +224,6 @@ Not to mention the upper hand of easy road access and free parking.
 
 `In quantitative studies this section provides details about dataset, variables, instruments and measurement procedures used in the study. If the data was collected by the authors this section will describe how the sample was collected. If specific instruments were constructed to collect the data they will be described here and included in the appendix. Procedures used to measure variables are often described in sufficient detail to permit replication. In economic papers, this section describes the empirical model and estimation strategy used by the authors.`
 
-**Data description**
-
 (Data and how it was collected)
 
 **Empirical Specification**
