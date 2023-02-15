@@ -1,0 +1,138 @@
+---
+title: "Regional and Urban Economics"
+subtitle: Dental industry
+author: "Sindre Halvorsen Øveraas , Sebastian Mena Fløysand, Alen Colakovic & Mona Lisa Jones"
+format:
+ pdf:
+  fontsize: "10"
+  documentclass: article
+  margin-left: 2cm
+  margin-right: 2cm
+papersize: A4
+editor: visual
+bibliography: references.bib
+---
+
+## Abstract
+
+## Introduction
+
+Our main task in this assignment is to perform an analysis of geospatial determinants of firm activity.
+More specifically we are to focus on the Norwegian dental industry in this regard, and see how geospatial determinants such as distances to shopping malls and CBDs (Central Business Districts), as well as population density can determine dental businesses income and general financial operations.
+As an example, central questions in this assignment will be; "Is it more beneficial to be highly centralized in urban areas with high population density and many competitors, or is it a greater advantage to be less centralized to the advantage that the nearest competing company is considerably further away?", "Which determinants appear to be most significant for economic benefit?"
+
+**Hypothesis**
+
+The location choice of firms providing service to end consumers, significantly determine their ultimate growth potential.
+
+**Research question**
+
+What is the most profitable location for dental practice?
+
+## Literature Review
+
+#### Previous literature on Shopping malls
+
+#### 
+
+### Theoretical Framework
+
+**Marshall's agglomeration principles**
+
+Marshall (1920) broadly divides externalities within agglomeration in three main categories.
+Firstly, *knowledge spill over* within industries or product specific technological knowledge.
+Furthermore, *market transactions* in terms of value chain transactions with industry-specialized buyers and suppliers.
+Lastly, *competition* for specialized production factors such as labour and product market competition @nielsen2021.
+
+**The hotelling model of spatial competition**
+
+Hotelling's (1929) theory of market area model will be applied to look at how the dental industry geographical location placements in the market area, to reach the profit-maximizing equilibrium.
+
+**Alonso model**
+
+Furthermore, geographical locations tied up to **Alonso's model (1960)**, an urbanized formulation of the nineteenth century von Thünen model.
+Moreover, indicating where the optimal location for dental practise might be.
+A more central location implies a willingness to pay higher rents due to lower transport costs and higher revenues @capello2015.
+Likewise, non-central location yields the same profit if and only if less rent is paid for land @capello2015.
+The bid-rent curve will in this case demonstrate the prise of rent within financial locations, Retail locations, and industrial locations.
+
+**Gravitational models ?**
+
+**Retail Agglomeration and Economies of Shopping Centres**
+
+Town and cities have long had shopping districts in which stores are concentrated.
+To some extent such centre points were the result of uncoordinated store-location decisions @brueckner2011.
+Nevertheless, not coincidentally according to Hotelling theory (1929).
+He describes the concentration of retail stores by a market desire to create a Nash equilibrium.
+At this point all retailers expected outcome cannot be improved by changing position.
+Contradictory to the assumption that consumers will shop at the nearest retailer, they are willing to travel significantly further to reach certain central places.
+
+Marshall (1920) points out another explanation for this in his seminal work on agglomeration.
+That being, intra-industry knowledge spillovers as mechanisms leading to formation of industry cluster @nielsen2021.
+In this case the dental industry information spillovers are bounded in geographical space.
+Hence, the need to locate in close proximity.
+
+Another important externalities expressed in Marshall (1920) theory is market transactions.
+Whereas, geographical proximity reduces transaction cost through several mechanism @nielsen2021.
+The market transactions can be extended to the endogenous location of specialized human capital @nielsen2021.
+Presumably, larger cities would be more attractive to dentists compromising cost and quality of specialised labour, should demand in smaller towns or cities not be met.
+
+Marshal also points out the competition within the geographical location.
+Hence, the marketplace and business districts give consumers low search and switching costs @capello2015.
+The fact that owners of stores seem to prefer highly concentrated shopping.
+More-so, it suggests that the beneficial outweigh the loss attributed to greater price competition.
+
+**Shopping Malls**
+
+Owners of shopping malls "orchestrate" the process of retail agglomeration that happens naturally in towns and cities @brueckner2011.
+Naturally, the same retail agglomeration and Nash equilibrium may occur in shopping malls if not more intensely as the shops are in closer proximity.
+Furthermore, the potential for more knowledge spillovers, higher volume of market transaction and more competition.
+
+When retail agglomeration is orchestrated by the owner of a shopping mall, the strength and direction of such externalities are taken into account @brueckner2011.
+Much so, because the price of rent is dependent on the overall revenue of a shopping mall.
+Hence, the owner of the mall wants to choose the mix of stores and their sizes taking these externalities, attributes and anchor stores attractiveness into account @brueckner2011.
+
+The Norwegian retail market for alcoholic beverages is controlled by the state monopoly.
+Anchor-stores such as the Wine-monopoly bring in a higher volume of consumers @lai2013.
+For example, shoppers visiting the Wine-monopoly in a mall may also visit a clothing store, and even find it beneficial to use public services at the same time.
+Nevertheless, they are limited in numbers and needs government approval.
+Each municipality must apply to get the wine monopoly in their area.
+One of the factors considered in this process is the death of city centre.
+A possible reason for this is so called "predatory malls" which are purposely built to overtake the exciting local market.
+Especially if the mall cater for cinema, restaurants, bars and other attributes in conjunction with the city centre.
+Not to mention the upper hand of easy road access and free parking.
+
+**Urban location of dentist; The Alonso model (1960)**
+
+The bid rent model is a simple theory to explain urban structure @capello2015.
+The model assumes a uniformed space where all land is equally fertile, and transport is identical in all directions, with a single specific marketplace the town or city centre in this case @capello2015.
+According to @capello2015 the model also assumes that demand is unlimited in other words it is supply-orientated.
+Additionally, the production factors are perfectly distributed in space, not uneven spatial distribution @capello2015.
+Furthermore, demonstrating a specific production function with fixed coefficients and constant returns to scale @capello2015.
+The last assumptions are perfect competition in the marketplace and that the unit transport costs are constant in space @capello2015.
+Rent obtained in the model is the remainder left after transport, production costs and profit has been subtracted from revenues @capello2015.
+
+![](images/bidrent-01.png)
+
+The illustration shows three categories: closest to the centre the bank and finance districts with the most expensive rent.
+Followed by the retail agglomeration areas and industrial sites furthest away from the central point.
+Dental practices are service orientated thus depending on population and central activities.
+Opening hours are relay outside of office hours.
+Production cost does not appear to be important in this case since dentist is a public service and not dependent of regular transportation of sales goods.
+The rent realized by the landowner is the envelope of the three rent supply curves @capello2015.
+From a Marshall's way of thinking dentists should cluster somewhere in this pink area to reap maximum benefits from the agglomeration.
+The attendances to break out of the clusters support Hotelling game theory of spatial competition which suggests that the spatial monopoly power provides an incentive for firms to use location as a competitive weapon to achieve spatial monopoly @mccann2013.
+
+#### Teori om utvalgt region?
+
+## Data
+
+## Results
+
+## Discussion
+
+## Conclusion
+
+## Acknowledgements
+
+## References
