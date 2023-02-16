@@ -115,3 +115,23 @@ Dentist_Data_LIMIT |>
 ```
 
 ## Econometric approach
+
+After a quixk view of some of our findings where we used the dentist income (y) and in comparison to the Distance from Mall (x) we already see some signs of a pattern where the income is grater when the dentist is placed closer to the shopping mall and decreases as the distance gets bigger.
+However, when the distance reach around 10km from the mall the income starts to increase before it then starts to decrease again around 20km.
+The theory from Keynesian suggest that this pattern might take place as the transportation cost for individuals further from the Shopping mall does not increase to much by travelling the extra distance.
+Hotelling also describes this case where the consumer are willing to travel further to reach a certain central place.
+
+\
+
+We also find that most dentist are either located close to a City, Central Business District or a shopping mall.
+
+\
+
+Dentist are also located close to echeother making for a sort of cluster, indicating that it might be som advantages beeing located in a cluster.
+Taken for granted that or data on Dentist includes both \"normal Dentis\" and Spescialist, there is reason to believe that it could be an advantage beeing located close together.
+As found in Marshalls Theory their ar several advantages by locating in clusters.
+Where in this case a \"normal dentist\" would for example recommend one of their customers to go see a specialist to get braces.
+The customer would then probably prefer to go to the closes specialist.
+The access to work force in these areas would also be good and wll be whitin the same geographic area.
+
+\
