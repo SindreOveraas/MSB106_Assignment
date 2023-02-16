@@ -37,24 +37,24 @@ What is the most profitable location for dental practice?
 
 Location theory gives regional economics its scientific disciplinary identity and constitutes its theoretical methodological core @capello2011.
 It has typically microeconomic foundation and uses theoretical models as well as adopting a statistical and geographical approach @capello2011.
-Furthermore, the theory uses the concept of externalities as disparities in the spatial distubution of activities, thereby laying the territorial bases for dynamic approaches @capello2011.
+Furthermore, the theory uses the concept of externalities as disparities in the spatial distribution of activities, thereby laying the territorial bases for dynamic approaches @capello2011.
 
 Regional growth theory involves spatial aspects of economic growth and territorial distribution of income @capello2011.
-It also involves generatating geographical advantages, in terms of easy or difficult access of a particular area @capello2011.
+It also involves generating geographical advantages, in terms of easy or difficult access of a particular area @capello2011.
 
 Harald Hotelling's locational equilibrium is determined by a logic of profit maximization whereby each producer controls its own market area.
 Productivity advantages of cities and urban clusters with a high density of firms increase profit by attracting a larger number of potential customers, and more productive workers @capello2011.
 Furthermore, the attractiveness of a central location increase the cost of rent.
 Alonso's bid rent model indicates the most profitable location for firms.
 Closer to the centre with agglomeration attributes or in rural areas with spacial monopoly and low rent.
-In Reilly's approach, the attractiveness of the retail location, represent the size of the retail centre.
+In gravitational models, the attractiveness of the retail location, represent the size of the retail centre.
 Furthermore, it depends on the variety of goods which can be purchased at the same location @mccann2013.
 
 A generalized Models based on Newton law of gravity can be applied to estimate flows between two points such as, cities or other points of interest @capello2015.
 The model of potential has the capacity to measure the potential of attractiveness to a place.
 Furthermore, predicting places of future growth potential for firms, shopping malls or public service more specifically dentist practice @capello2015.
 
-**Interdependent location choice, the Hotelling model (1929)**
+**Interdependent location choice, the Hotelling's model (1929)**
 
 The model assume that given the location of producers, and given demand uniformly distributed geographically (in linear or circular form) the market is divided into areas within each of which there operates a single firm in a duopoly environment.
 Furthermore, no relocation costs and demand only depend on location choice @capello2015.
@@ -70,33 +70,22 @@ Perhaps the simplest way to explain why there is a natural tendency for retailer
 
 **Marshall's agglomeration principles**
 
-Marshall (1920) broadly divides externalities within agglomeration in three main categories potentially driving sales.
+Marshall (1920) broadly divides externalities within agglomeration in three main categories with potential to drive sales.
 Firstly, knowledge spill over within industries or product specific technological knowledge.
 Furthermore, market transactions in terms of value chain transactions with industry-specialized buyers and suppliers.
-Lastly, competition for specialized production factors such as labour and product market competition Nielsen et al. (2021).
+Lastly, competition for specialized production factors such as labour and product market competition @nielsen2021Nielsen.
 
-There are solidly established conclusions regarding the excistanse of agglomeration economies Puga (2010).
-However, less proof of their estimated magnitude therefore identifying the causes of agglomeration economies is proving more difficult Puga (2010).
-Nevertheless, there is a large theoretical literature that develops these mechanisms Puga (2010).
-Duranton and Puga (2004) discuss these classifications and identify learning, sharing and matching as the main causes of agglomeration economies.
+There are solidly established conclusions regarding the excistanse of agglomeration economies @puga2010Puga. However, less proof of their estimated magnitude therefore identifying the causes of agglomeration economies is proving more difficult @puga2010Puga. Nevertheless, there is a large theoretical literature that develops these mechanisms @puga2010Puga. @duranton2004Duranton discuss these classifications and identify learning, sharing and matching as the main causes of agglomeration economies.
 
-A larger market allows for a more efficient sharing of local infrastructure and facilities, a variety of intermediate input suppliers, or a pool of workers with similar skills Puga (2010).
-Dispite higer rent the dental industry and shopping malls, seams to reap higher benefits in more populated areas as they are dependent on being located where there is a higher volume of patiants to drive sales.
-The attraction for the consumers and users of public facilities is overall cost reduction Puga (2010).
-Hence, the larger the population sharing facilities the lower the cost per user Puga (2010).
-Presumably, industrial factories and business clusters are more dependent on being close to raw materials and industrial action.
+A larger market allows for a more efficient sharing of local infrastructure and facilities, a variety of intermediate input suppliers, or a pool of workers with similar skills @puga2010Puga. Dispite higer rent the dental industry and shopping malls, seams to reap higher benefits in more populated areas as they are dependent on being located where there is a higher volume of patiants to drive sales.
+The attraction for the consumers and users of public facilities is overall cost reduction @puga2010Puga. Hence, the larger the population sharing facilities the lower the cost per user @puga2010Puga. Presumably, industrial factories and business clusters are more dependent on being close to raw materials and industrial action.
 
-Furthermore, a larger market also allows for a better matching between employers and employees, improved chances of finding suitable and better quality of matches Puga (2010).
-Shopping malls accure skilled workers to drive sales.
-However, they are not so dependent on highly educated workers as dentists whom according to resent study, tend to prefer bigger cities Davis and Dingel (2020).
-More-so, cites provide a constant market for specialized skills and more productive work force Puga (2010).
-Perhaps, a possibility for higher wages being compensated by more efficiant workers in bigger agglomeration economies.
+Furthermore, a larger market also allows for a better matching between employers and employees, improved chances of finding suitable and better quality of matches @puga2010Puga. Shopping malls require skilled workers to drive sales.
+However, they are not so dependent on highly educated workers as dentists whom according to resent study, tend to prefer bigger cities (as they are highly educated) @davis2020Davis. More-so, cites provide a constant market for specialized skills and more productive work force @puga2010Puga. Perhaps, a possibility for higher wages being compensated by more efficient workers in bigger agglomeration economies.
 That said the Norwegian cities might differ from the american cites in the study, as the population and clusters are no where near the same size.
-Lastly, a larger market can also facilitate learning by promoting the development and widespread adaptation of new technologies and business practice Puga (2010).
+Lastly, a larger market can also facilitate learning by promoting the development and widespread adaptation of new technologies and business practice @puga2010Puga.
 
-kladd
-
-*"Interactions with experienced workers helps acquire valuable skills and experienced workers remain in cities to share the rent of this learning process. Besides this purposeful transition of knowledge, the information literature on learning in cities has also emphasized the casual and unintended flow of information facilitated by big cities."* Puga (2010)
+*"Interactions with experienced workers helps acquire valuable skills and experienced workers remain in cities to share the rent of this learning process. Besides this purposeful transition of knowledge, the information literature on learning in cities has also emphasized the casual and unintended flow of information facilitated by big cities."* @puga2010Puga
 
 **Urban location of dentist; The Alonso model**
 
@@ -110,7 +99,7 @@ More-so, the town or city has a single city centre, and the city centre of busin
 @capello2015.
 The model also assume perfect competition and unlimited demand, in other words it is supply-orientated @capello2015.
 Furthermore, demonstrating a specific production function with fixed coefficients and constant returns to scale.Rent obtained in the model is the remainder left after transport, production costs and profit has been subtracted from revenues @capello2015.
-The bid-rent curve will in this case demonstrate the prise of rent within Bank and Financial locations, Retail locations, and industrial locations.3
+The bid-rent curve will in this case demonstrate the prise of rent within Bank and Financial locations, Retail locations, and industrial locations.
 
 ![](images/bidrent.png)
 
@@ -131,7 +120,7 @@ The attendances to break out of the clusters support Hotelling's game theory of 
 **Gravitational models**
 
 The centre attracts firms, people and activities.
-Furthermore, it influence the central points in diverse ways such as commuter movements, disfuction of knowledge, corporations and network and personal relationship @capello2015.
+Furthermore, it influence the central points in diverse ways such as commuter movements, disfustion of knowledge, corporations and network and personal relationship @capello2015.
 More-so, they are generated by the intensity of the flows generated between places @capello2015.
 The gravitational pull to a place of interest for a dentist will determine how much sales can be generated by locating there.
 Several locations can then be measures against each other to determine profit maximisation.
@@ -140,12 +129,12 @@ Changes in infrastructure such easier access to a place might change the attract
 An example of this could be Rogfast, improving the connection between Haugalandet and Stavanger.
 Subserviently, increasing the gravitationally pull between the two places.
 Furthermore, The model uses population and distance to measure the attractiveness and relations between two places @capello2015.
-Rogfast might move the population of Haugesund futher south and a new town centre might occur competing with other retail clusters in years to come.
-On the other hand the flow of people towards Raglamyr might increase untill the potental new centre place has grown.
+Rogfast might move the population of Haugesund further south and a new town centre might occur competing with other retail clusters in years to come.
+On the other hand the flow of people towards Raglamyr might increase until the potential new centre place has grown.
 These models have predictive capacity and can be used to estimate the potential impact.
 In particular, location of new productive activity in an area @capello2015.
 For instance predict where to build a shopping centre @capello2015.
-A new shopping centre further south in Haugaland or expantion of excisting retail agglomeration areas might be of interest.
+A new shopping centre further south in Haugaland or expansion of excising retail agglomeration areas might be of interest.
 As a result of increased population.
 By taking these factors in to account dentist could predict the most profitable locations in years to come by predicting the amount of people that will move from one city to another or tow different points of interest within a city.
 
