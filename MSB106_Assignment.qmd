@@ -128,10 +128,25 @@ We also find that most dentist are either located close to a City, Central Busin
 \
 
 Dentist are also located close to echeother making for a sort of cluster, indicating that it might be som advantages beeing located in a cluster.
-Taken for granted that or data on Dentist includes both \"normal Dentis\" and Spescialist, there is reason to believe that it could be an advantage beeing located close together.
+Taken for granted that or data on Dentist includes both "normal Dentis" and Spescialist, there is reason to believe that it could be an advantage beeing located close together.
 As found in Marshalls Theory their ar several advantages by locating in clusters.
-Where in this case a \"normal dentist\" would for example recommend one of their customers to go see a specialist to get braces.
+Where in this case a "normal dentist" would for example recommend one of their customers to go see a specialist to get braces.
 The customer would then probably prefer to go to the closes specialist.
 The access to work force in these areas would also be good and wll be whitin the same geographic area.
+
+\
+as mentioned earlier, dentis should place them self in the pink area of the Alons model.
+however, a dentist beeing placed further out in to other retail agglomeration areas can also be a strategy, but the dentist would then rely on the area having less competition so the rate between competition and population density are proposinal.
+Our findings in QGIS shows that in areas where it is a high population density, the number of dentist also is higher.
+The user/pasient then has more to choose between and the dentist also has a bigger scale of potential customers.
+Where in smaller areas it is less competition and the dentis would appear to have somewhat of a monopoly since the transportation cost to the second closes dentis are noticeable higher.
+
+\
+
+it is important to be aware of the fact that going to the dentist is a public services and most people get assigned to their closest dentis based on their living address.
+This also takes away som of the competition.
+Another thing that is important to notice is that when passed 18 years of age, you could risk loosing your local public dentist due to lack of capacity.
+a suggestion would be that for a dentist to be placed close CBD areas, shopping malls and industry can have a positive effect on revenue since this is areas where most of the population spends their time during their day, either going to work, school and other errand.
+So by beeing placed close CBD areas, shopping malls and industry the transportation cost for the customer could be reduced as they are already located in these areas even if they dont live here
 
 \
