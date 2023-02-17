@@ -75,13 +75,22 @@ Firstly, knowledge spill over within industries or product specific technologica
 Furthermore, market transactions in terms of value chain transactions with industry-specialized buyers and suppliers.
 Lastly, competition for specialized production factors such as labour and product market competition @nielsen2021Nielsen.
 
-There are solidly established conclusions regarding the excistanse of agglomeration economies @puga2010Puga. However, less proof of their estimated magnitude therefore identifying the causes of agglomeration economies is proving more difficult @puga2010Puga. Nevertheless, there is a large theoretical literature that develops these mechanisms @puga2010Puga. @duranton2004Duranton discuss these classifications and identify learning, sharing and matching as the main causes of agglomeration economies.
+There are solidly established conclusions regarding the excistanse of agglomeration economies @puga2010Puga.
+However, less proof of their estimated magnitude therefore identifying the causes of agglomeration economies is proving more difficult @puga2010Puga.
+Nevertheless, there is a large theoretical literature that develops these mechanisms @puga2010Puga.
+@duranton2004Duranton discuss these classifications and identify learning, sharing and matching as the main causes of agglomeration economies.
 
-A larger market allows for a more efficient sharing of local infrastructure and facilities, a variety of intermediate input suppliers, or a pool of workers with similar skills @puga2010Puga. Dispite higer rent the dental industry and shopping malls, seams to reap higher benefits in more populated areas as they are dependent on being located where there is a higher volume of patiants to drive sales.
-The attraction for the consumers and users of public facilities is overall cost reduction @puga2010Puga. Hence, the larger the population sharing facilities the lower the cost per user @puga2010Puga. Presumably, industrial factories and business clusters are more dependent on being close to raw materials and industrial action.
+A larger market allows for a more efficient sharing of local infrastructure and facilities, a variety of intermediate input suppliers, or a pool of workers with similar skills @puga2010Puga.
+Dispite higer rent the dental industry and shopping malls, seams to reap higher benefits in more populated areas as they are dependent on being located where there is a higher volume of patiants to drive sales.
+The attraction for the consumers and users of public facilities is overall cost reduction @puga2010Puga.
+Hence, the larger the population sharing facilities the lower the cost per user @puga2010Puga.
+Presumably, industrial factories and business clusters are more dependent on being close to raw materials and industrial action.
 
-Furthermore, a larger market also allows for a better matching between employers and employees, improved chances of finding suitable and better quality of matches @puga2010Puga. Shopping malls require skilled workers to drive sales.
-However, they are not so dependent on highly educated workers as dentists whom according to resent study, tend to prefer bigger cities (as they are highly educated) @davis2020Davis. More-so, cites provide a constant market for specialized skills and more productive work force @puga2010Puga. Perhaps, a possibility for higher wages being compensated by more efficient workers in bigger agglomeration economies.
+Furthermore, a larger market also allows for a better matching between employers and employees, improved chances of finding suitable and better quality of matches @puga2010Puga.
+Shopping malls require skilled workers to drive sales.
+However, they are not so dependent on highly educated workers as dentists whom according to resent study, tend to prefer bigger cities (as they are highly educated) @davis2020Davis.
+More-so, cites provide a constant market for specialized skills and more productive work force @puga2010Puga.
+Perhaps, a possibility for higher wages being compensated by more efficient workers in bigger agglomeration economies.
 That said the Norwegian cities might differ from the american cites in the study, as the population and clusters are no where near the same size.
 Lastly, a larger market can also facilitate learning by promoting the development and widespread adaptation of new technologies and business practice @puga2010Puga.
 
@@ -201,7 +210,8 @@ Not to mention the upper hand of easy road access and free parking.
 
 SEDA (Spatial Explanatory Data Analyses)
 
-Spatial data analysis is a rapidly growing area in Statistics @haslett1992. The Journal of the statistics society define such data as being objects in space, which objects have physical location.
+Spatial data analysis is a rapidly growing area in Statistics @haslett1992.
+The Journal of the statistics society define such data as being objects in space, which objects have physical location.
 Furthermore, the analyses are spatial if these locations are relevant to the interpretation of the data @haining1998.
 
 The examination of the data involves the examination of data collected from q-gis maps; `it will involve little more. Graphical techniques for examining such maps are thus a central part of the methodology. A number of such techniques are discussed."` @haslett1992.

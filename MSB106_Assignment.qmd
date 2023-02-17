@@ -9,7 +9,6 @@ format:
   margin-right: 2cm
 papersize: A4
 editor: visual
-bibliography: references.bib
 ---
 
 ```{r, message=FALSE}
@@ -52,8 +51,6 @@ Dentist_Data <- inner_join(Dist_Mal_Dentist, Dist_CBD_Dentist, by = "fid") |>
 Dentist_Data <- inner_join(Dentist_Data, Zonal_Den, by = "fid")
 ```
 
-**Abstract**
-
 ## Introduction
 
 Our main task in this assignment is to perform an analysis of geospatial determinants of firm activity.
@@ -62,206 +59,7 @@ As an example, central questions in this assignment will be; "Is it more benefic
 
 ## Theoretical Foundation of Hypothesis
 
-**Hypothesis & Research question**
-
-The location choice of firms providing service to end consumers, significantly determine their ultimate growth potential.
-
-What is the most profitable location for dental practice?
-
-**Location Theory**
-
-Location theory gives regional economics its scientific disciplinary identity and constitutes its theoretical methodological core @capello2011.
-It has typically microeconomic foundation and uses theoretical models as well as adopting a statistical and geographical approach @capello2011.
-Furthermore, the theory uses the concept of externalities as disparities in the spatial distribution of activities, thereby laying the territorial bases for dynamic approaches @capello2011.
-
-Regional growth theory involves spatial aspects of economic growth and territorial distribution of income @capello2011.
-It also involves generating geographical advantages, in terms of easy or difficult access of a particular area @capello2011.
-
-Harald Hotelling's locational equilibrium is determined by a logic of profit maximization whereby each producer controls its own market area.
-Productivity advantages of cities and urban clusters with a high density of firms increase profit by attracting a larger number of potential customers, and more productive workers @capello2011.
-Furthermore, the attractiveness of a central location increase the cost of rent.
-Alonso's bid rent model indicates the most profitable location for firms.
-Closer to the centre with agglomeration attributes or in rural areas with spacial monopoly and low rent.
-In Reilly's approach, the attractiveness of the retail location, represent the size of the retail centre.
-Furthermore, it depends on the variety of goods which can be purchased at the same location @mccann2013.
-
-A generalized Models based on Newton law of gravity can be applied to estimate flows between two points such as, cities or other points of interest @capello2015.
-The model of potential has the capacity to measure the potential of attractiveness to a place.
-Furthermore, predicting places of future growth potential for firms, shopping malls or public service more specifically dentist practice @capello2015.
-
-**Interdependent location choice, the Hotelling's model (1929)**
-
-The model assume that given the location of producers, and given demand uniformly distributed geographically (in linear or circular form) the market is divided into areas within each of which there operates a single firm in a duopoly environment.
-Furthermore, no relocation costs and demand only depend on location choice @capello2015.
-
-The location game starts off with the total market of AB, firm A in the middle of location A and firm B starts in the middle of location B.
-One firm starts relocating closer to the other to take some of the customers in the other market area @capello2015.
-The other respond by doing the same and the game continues until both end up in the middle of the market on the broader of AB.
-The end of the game is the position where neither can increase sales volume by moving position @capello2015.
-
-A simple explanation of why two dentists providing the same service, at the same price might locate next to each other.
-Nevertheless, despite increasing the transportation cost for patients.
-Perhaps the simplest way to explain why there is a natural tendency for retailers to cluster in space; a tendency which may help explain the existence of larger agglomerations.
-
-**Marshall's agglomeration principles**
-
-Marshall (1920) broadly divides externalities within agglomeration in three main categories potentially driving sales.
-Firstly, *knowledge spill over* within industries or product specific technological knowledge.
-Furthermore, *market transactions* in terms of value chain transactions with industry-specialized buyers and suppliers.
-Lastly, *competition* for specialized production factors such as labour and product market competition Nielsen et al. (2021).
-
-There are solidly established conclusions regarding the excistanse of agglomeration economies @puga2010.
-However, less proof of their estimated magnitude therefore identifying the causes of agglomeration economies is proving more difficult @puga2010.
-Nevertheless, there is a large theoretical literature that develops these mechanisms @puga2010.
-@duranton2004 discuss these classifications and identify learning, sharing and matching as the main causes of agglomeration economies.
-
-*Sharing*
-
-A larger market allows for a more efficient sharing of local infrastructure and facilities, a variety of intermediate input suppliers, or a pool of workers with similar skills @puga2010..
-Dspite higher rent the dental industry and shopping malls, seams to reap higher benefits in more populated areas as they are dependent on being located where there is a higher volume of patients to drive sales.
-The attraction for the consumers and users of public facilities is overall cost reduction @puga2010.
-Hence, the larger the population sharing facilities the lower the cost per user @puga2010.
-Presumably, industrial factories and business clusters are more dependent on being close to raw materials and industrial action.
-
-*Matching*
-
-Furthermore, a larger market also allows for a better matching between employers and employees, improved chances of finding suitable and better quality of matches @puga2010.
-Shopping malls require skilled workers to drive sales.
-However, they are not so dependent on highly educated workers as dentists whom according to resent study, tend to prefer bigger cities @davis2020Davis.
-More-so, cites provide a constant market for specialized skills and more productive work force @puga2010.
-Perhaps, a possibility for higher wages being compensated by more efficient workers in bigger agglomeration economies.
-That said the Norwegian cities might differ from the american cites in the study, as the population and clusters are no where near the same size.
-Lastly, a larger market can also facilitate learning by promoting the development and widespread adaptation of new technologies and business practice @puga2010.
-
-*Learning*
-
-*"Interactions with experienced workers helps acquire valuable skills and experienced workers remain in cities to share the rent of this learning process. Besides this purposeful transition of knowledge, the information literature on learning in cities has also emphasized the casual and unintended flow of information facilitated by big cities."* @puga2010.
-
-**Urban location of dentist; The Alonso model**
-
-The model demonstrate geographical locations tied up to location.
-It is an urbanized formulation of the nineteenth century von Thünen model @capello2015.
-Moreover, in this case used to get an indicating of where the most profitable location for dental practise might be located.
-Alonso assumes the existence of a city that cannot be build instantaneously, and therefore of an effective rent-curve from the city centre to the periphery.
-Furthermore, it determines the location for a new firm willing to locate in the city and the profit the firm can obtain, which might be different from the normal or average price competition @capello2015.
-As the Von Thünen assume a uniformed space where all land is equally fertile, this model envisages a city, endowed with infrastructure which cover the entire city in all directions whereas unit transport costs are constant in space.
-More-so, the town or city has a single city centre, and the city centre of business district (CBD) is generally defined as the most attractive for all firms.
-@capello2015.
-The model also assume perfect competition and unlimited demand, in other words it is supply-orientated @capello2015.
-Furthermore, demonstrating a specific production function with fixed coefficients and constant returns to scale.Rent obtained in the model is the remainder left after transport, production costs and profit has been subtracted from revenues @capello2015.
-The bid-rent curve will in this case demonstrate the prise of rent within Bank and Financial locations, Retail locations, and industrial locations.3
-
-![](images/bidrent.png)
-
-The illustration shows three categories: The most expensive rent closest to the centre is the Bank and finance district, followed by the retail agglomeration areas and industrial sites furthest away from the central point.
-Dental practices are service orientated thus depending on population density and central activities.
-Opening hours are relay outside of office hours.
-Production cost does not appear to be important in this case since dentist is a public service.
-Hence, not dependent of regular transportation of sales goods.
-The rent realized by the landowner is the envelope of the three rent supply curves @capello2015.
-From a Marshallian way of thinking dentists should cluster somewhere in this pink area to reap maximum sales volume.
-Other than locating in the inner circle dentists may also increase their profits further out in to other retail agglomeration area.
-The attractiveness might be high in these places due to economies of scope.
-As the positive benefits from the Marshallian agglomeration attributes play out.
-Subsequently, increasing profit by trading higher transportation cost for lower rent.
-In addition fewer dentists to compete with.
-The attendances to break out of the clusters support Hotelling's game theory of spatial competition which suggests that the spatial monopoly power provides an incentive for firms to use location as a competitive weapon to achieve spatial monopoly @mccann2013McCann.
-
-**Gravitational models**
-
-The centre attracts firms, people and activities.
-Furthermore, it influence the central points in diverse ways such as commuter movements, disfuction of knowledge, corporations and network and personal relationship @capello2015.
-More-so, they are generated by the intensity of the flows generated between places @capello2015.
-The gravitational pull to a place of interest for a dentist will determine how much sales can be generated by locating there.
-Several locations can then be measures against each other to determine profit maximisation.
-These models has the potential to measures the future attractiveness of a place.
-Changes in infrastructure such easier access to a place might change the attractiveness of a place or move the flow of people.
-An example of this could be Rogfast, improving the connection between Haugalandet and Stavanger.
-Subserviently, increasing the gravitationally pull between the two places.
-Furthermore, The model uses population and distance to measure the attractiveness and relations between two places @capello2015.
-Rogfast might move the population of Haugesund futher south and a new town centre might occur competing with other retail clusters in years to come.
-On the other hand the flow of people towards Raglamyr might increase untill the potental new centre place has grown.
-These models have predictive capacity and can be used to estimate the potential impact.
-In particular, location of new productive activity in an area @capello2015.
-For instance predict where to build a shopping centre @capello2015.
-A new shopping centre further south in Haugaland or expantion of excisting retail agglomeration areas might be of interest.
-As a result of increased population.
-By taking these factors in to account dentist could predict the most profitable locations in years to come by predicting the amount of people that will move from one city to another or tow different points of interest within a city.
-
-**Retail Agglomeration and Economies of Shopping Centres**
-
-Town and cities have long had shopping districts in which stores are concentrated.
-To some extent such centre points were the result of uncoordinated store-location decisions @brueckner2011.
-Nevertheless, not coincidentally according to Hotelling's theory (1929).
-He describes the concentration of retail stores by a market desire to create a Nash equilibrium.
-At this point all retailers expected sales maximisation outcome cannot be improved by changing position.
-Contradictory to the assumption that consumers will shop at the nearest retailer, they are willing to travel significantly further to reach certain central places.
-Marshall (1920) points out another explanation for this in his seminal work on agglomeration.
-That being,intra-industry knowledge spillovers as mechanisms leading to formation of industry cluster @nielsen2021.
-In this case the dental industry information spillovers are bounded in geographical space.
-Hence, the need to locate in close proximity.
-That being the latest equipment, in order to work faster or the right personnel to attract more patients.
-Another way to drive sales in this area could be by dentist specialisation and patients referrals between dentists.
-
-Another important externalities expressed in Marshall (1920) theory is market transactions.
-Whereas, geographical proximity reduces transaction cost through several mechanism @nielsen2021.
-The market transactions can be extended to the endogenous location of specialized human capital @nielsen2021.
-"It is well known among economists and other social scientists that large cities have disproportionately large shares of highly educated workers, and the trend has been growing in recent decades." Baker (n.d.) Presumably, larger cities would then be more attractive to dentists in terms of cost and quality of specialised labour in smaller towns.
-Especially, those trying to achieve spatial monopoly end up loosing profit by overpaying for labour or in worst case scenario not finding enough dentists labour and end up compromising on quality.
-In both cases growth potential would be compromised.
-
-Marshal also points out the competition within the geographical location.
-Hence, the marketplace and business districts give consumers low search and switching costs @capello2015.
-The fact that owners of stores seem to prefer highly concentrated shopping.
-More-so, it suggests that the sales volumes outweigh the loss attributed to greater price competition.
-
-**Shopping Malls**
-
-Owners of shopping malls "orchestrate" the process of retail agglomeration that happens naturally in towns and cities @brueckner2011.
-Naturally, the same retail agglomeration and Nash equilibrium may occur in shopping malls if not more intensely as the shops are in closer proximity.
-Furthermore, the potential for more knowledge spillovers, higher volume of market transaction and more competition.
-When retail agglomeration is orchestrated by the owner of a shopping mall, the strength and direction of such externalities are taken into account @brueckner2011.
-Much so, because the price of rent is dependent on the overall revenue of a shopping mall.
-Hence, the owner of the mall wants to choose the mix of stores and their sizes taking these externalities, attributes and anchor stores attractiveness into account @brueckner2011.
-The Norwegian retail market for alcoholic beverages is controlled by the state monopoly.
-Anchor-stores such as the Wine-monopoly bring in a higher volume of consumers @lai2013Lai.
-For example, shoppers visiting the Wine-monopoly in a mall may also visit a clothing store, and even find it beneficial to use public services at the same time.
-Nevertheless, they are limited in numbers and needs government approval.
-Each municipality must apply to get the wine monopoly in their area.
-One of the factors considered in this process is the death of city centre.
-A possible reason for this is so called "predatory malls" which are purposely built to overtake the exciting local market.
-Perhaps more so if malls cater for cinema, restaurants, bars and other attributes in conjunction with the city centre.
-Not to mention the upper hand of easy road access and free parking.
-
 ## Data description
-
-`In quantitative studies this section provides details about dataset, variables, instruments and measurement procedures used in the study. If the data was collected by the authors this section will describe how the sample was collected. If specific instruments were constructed to collect the data they will be described here and included in the appendix. Procedures used to measure variables are often described in sufficient detail to permit replication. In economic papers, this section describes the empirical model and estimation strategy used by the authors.`
-
-(Data and how it was collected)
-
-**Empirical Specification**
-
-**Econometric Approach**
-
-**Estimation strategy**
-
-**Analytical framework**
-
-SEDA (Spatial Explanatory Data Analyses)
-
-Spatial data analysis is a rapidly growing area in Statistics @haslett1992.
-The Journal of the statistics society define such data as being objects in space, which objects have physical location.
-Furthermore, the analyses are spatial if these locations are relevant to the interpretation of the data @haining1998.
-
-The examination of the data involves the examination of data collected from q-gis maps; `it will involve little more. Graphical techniques for examining such maps are thus a central part of the methodology. A number of such techniques are discussed."` @haslett1992.
-
-`What data are used?`
-
-`What has been calculated?`
-
-`What was not used and why?`
-
-`Outlines?`
 
 ```{r}
 kable(summary(Commune_Data))
@@ -323,8 +121,16 @@ Dentist_Data_LIMIT |>
 ```
 
 ```{r}
+Dentist_Data_LIMIT |>
+  ggplot(aes(x = X_sum, y = Sum.salgsi, colour = Sum.salgsi)) +
+  geom_point(lwd = .9) +
+  labs(x = "Pop density", y = "Income") +
+  theme_bw()
+```
+
+```{r}
 lm1 <- lm(Sum.salgsi ~ X_sum, data = Dentist_Data_LIMIT)
-lm2 <- lm(Sum.salgsi ~ DistCBD + DistMal + X_sum, data = Dentist_Data_LIMIT)
+lm2 <- lm(Sum.salgsi ~ DistCBD + DistMal + X_sum + (DistCBD*X_sum), data = Dentist_Data_LIMIT)
 ```
 
 ```{r}
@@ -332,9 +138,3 @@ huxreg(list("Model 1" = lm1, "Model 2" = lm2), statistics = c(N = "nobs", R2 = "
 ```
 
 ## Econometric approach
-
-**Result**
-
-**Discussion**
-
-**Conclusion**
