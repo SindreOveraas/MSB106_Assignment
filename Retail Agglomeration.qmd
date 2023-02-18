@@ -204,14 +204,20 @@ We where also provided with different point layers, such as the geometric center
 We where also provided with a QGIS layer with population density estimates, visualized with 100x100 raster graphics.
 
 
-To carry out a full-flegded data analysis of the influencing factors of the activity of Norwegian dentist services, we collected some more data than what we already had been presented with.
+To carry out a full-flegded data analysis of the influencing factors of the activity of Norwegian dentist services, we had to collect more data than what we already had been presented with.
 We firstly utilized QGIS to calculate different other statistics and variables.
 Regarding the Norwegian shopping malls layer we added the variable \"Wine-monopoly\" as a false/ true variable to determine which Norwegian malls, and also the number of stores which are in each mall.
 The malls opening hours have also been included in this layer.
 From SSB, we gathered data on the average municipal sales per inhabitant in retailing for each Norwegian commune.
 We also created 2 km buffer zones around dentists and CBDs to determine population density in these areas.
 
-**Empirical Specification**
+After calculations in QGIS we transfered our data to RSTUDIO to do the primary statistical analysis of our data.
+The data is then merged into two different data frames.
+The first one containing Norwegian communes as the unit of observation, which currently includes geometric commune centers to the nearest mall, the retail per capita per commune and the different commune numbers.
+The second data frame use dentists as the unit of observations.
+This data frame include data on the distances from CBD to dentists, distances from malls to dentists and different significant accounting figures for the different dentist businesses, such as total sales revenue and EBIT (Earnings Before Interests and Taxes).
+
+**mpirical Specification**
 
 **Econometric Approach**
 
