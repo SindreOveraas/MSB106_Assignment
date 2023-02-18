@@ -150,3 +150,23 @@ a suggestion would be that for a dentist to be placed close CBD areas, shopping 
 So by beeing placed close CBD areas, shopping malls and industry the transportation cost for the customer could be reduced as they are already located in these areas even if they dont live here
 
 \
+
+![](https://lh3.googleusercontent.com/zSwLHynV_h_vnX66jchxqoZgBDHH_LVE5PAOiiSLtM3fgSrVBOPT4lT3G7jP-OlsOwg65bJhrAj9rPTicCosZdGAYHySGihdbgtSzj7UICa8fQfX7oMPtO-xdHGtzP_SnGVXlWLrUUPKDKTWfJN2l00)
+
+\
+\
+
+The model shows that moving further away from a CBD and a Mall has a negative effect on te income for dentist.
+moving 1 km away from CBD reduce the income by aprox.
+528 kr and moving 1 km further away from a shopping mall reduces the income by 25 725 kr.
+This tells a story where it is more profitable beeing located close or in a Mal or a CBD where the Mall is the best option out from this model.
+The result also indicates that the best placing for a dentis would be in the second circle from the Alonso model as stated earlier, as this is the area where we are most likely to find Shopping malls.
+
+\
+
+The reasoning for a more profitable business close to a CBD can be that this is more crowded areas, gravitation pull.
+More people live here and it also contains more business and activities which can be combined with a dentist appointment.
+Somewhat of the same pattern goes for shopping malls where customers can combine their dentis visit with shopping afterwards, maybe in a way to threat them self.
+
+\
+\
