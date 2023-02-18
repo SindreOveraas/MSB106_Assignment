@@ -296,7 +296,7 @@ Having an urban system of multiple centres allowed applying the same logic of th
 Resulting in finding relationships based on three different types of distance measurements.
 Firstly, the distance between Dental Pratice and CBD then, dentist and other retail agglomeration areas and lastly amongst dentists.
 Finding that most dentist are either located close to a City, Central Business District or a shopping mall.
-Additionally, dentist also located close to eachother making some sort of industrial cluster.
+Additionally, dentist also located close to each other making some sort of industrial cluster.
 Supporting, Marshall's agglomeration theory on knowledge spillovers, increasing the sills to attract more patients.
 
 Subsequently, when using the dentist income (y) and comparing the distance from the mall (x), signs of patterns emerge showing that income is greater when the dentist is placed closer to the shopping mall.
@@ -305,7 +305,7 @@ However, when the distance reach around 10km from the mall the income starts to 
 The Keynesian theory suggest that this pattern might take place as the transportation cost for individuals further away from the Shopping mall does not increase to much by travelling the extra distance.
 Hotelling also describes this case where the consumer are willing to travel further to reach a certain central place.
 
-According to the Alons model dentist should locate close to the CBD for higher volume of sales.
+According to the Alons's model dentist should locate close to the CBD for higher volume of sales.
 Dentist being placed further out in to other retail agglomeration areas can also be a good strategy.
 However, the dentist would then rely on the area having less competition so the rate between competition and population density are proportional.
 Our findings in QGIS shows that in areas where it is a high population density, the number of dentist also is higher.
