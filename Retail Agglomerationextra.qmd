@@ -288,19 +288,21 @@ Furthermore, the population is decentralized with the majority of population liv
 This unique spatial distribution of land might give a possible explanation to diversions from the simple theoretical models used in this paper.
 Nevertheless, the way economies are organised comes partly from the emergence of centralities within a city.
 Transportation networks have the potential to increase sprawl depending on how the urban system evolves gradually.
+
 For example faster transportation can increase convenience of commuting, increasing rent commuters from the city centre are willing to pay, and therefore increasing the area of developed land without this being necessary corresponding to an increase in population.
 As distance increases, communication networks become important allowing the growth of sub centres to functions as self organising systems.
 
 The results from the bid rent configuration from the city centre gave the opportunity to explore other locations in each municipality's.
-Having an urban system of multiple centres allowed applying the same logic of the model to other retail agglomeration areas.
+Having an urban system of multiple centres and applying the same logic of the model to other retail agglomeration areas.
 Resulting in finding relationships based on three different types of distance measurements.
-Firstly, the distance between Dental Pratice and CBD then, dentist and other retail agglomeration areas and lastly amongst dentists.
+Firstly, the distance between Dental Practice and CBD then, dentist and other retail agglomeration areas and lastly amongst dentists.
 Finding that most dentist are either located close to a City, Central Business District or a shopping mall.
 Additionally, dentist also located close to each other making some sort of industrial cluster.
 Supporting, Marshall's agglomeration theory on knowledge spillovers, increasing the sills to attract more patients.
 
 Subsequently, when using the dentist income (y) and comparing the distance from the mall (x), signs of patterns emerge showing that income is greater when the dentist is placed closer to the shopping mall.
 Furthermore, decreasing as the distance gets bigger.
+
 However, when the distance reach around 10km from the mall the income starts to increase before it then starts to decrease again around 20km.
 The Keynesian theory suggest that this pattern might take place as the transportation cost for individuals further away from the Shopping mall does not increase to much by travelling the extra distance.
 Hotelling also describes this case where the consumer are willing to travel further to reach a certain central place.
