@@ -17,8 +17,8 @@ bibliography: references.bib
 
 ## Introduction
 
-Our main task in this assignment is to perform an analysis of geospatial determinants of firm activity.
-More specifically we are to focus on the Norwegian dental industry in this regard, and see how geospatial determinants such as distances to shopping malls and CBDs (Central Business Districts), as well as population density can determine dental businesses income and general financial operations.
+Our main task in this assignment is to perform an analysis of geo-spatial determinants of firm activity.
+More specifically we are to focus on the Norwegian dental industry in this regard, and see how geo-spatial determinants such as distances to shopping malls and CBDs (Central Business Districts), as well as population density can determine dental businesses income and general financial operations.
 As an example, central questions in this assignment will be; "Is it more beneficial to be highly centralized in urban areas with high population density and many competitors, or is it a greater advantage to be less centralized to the advantage that the nearest competing company is considerably further away?", "Which determinants appear to be most significant for economic benefit?"
 
 **Hypothesis**
@@ -52,6 +52,7 @@ In gravitational models, the attractiveness of the retail location, represent th
 Furthermore, it depends on the variety of goods which can be purchased at the same location @mccann2013.
 
 The model of potential has the capacity to measure the potential of attractiveness to a place.
+Subsequently, the gravitational force is higher in bigger cities or more heavily populated areas.
 Furthermore, predicting places of future growth potential for firms, shopping malls or public service more specifically dentist practice @capello2015.
 
 **Interdependent location choice, the Hotelling's model (1929)**
@@ -308,7 +309,7 @@ Hotelling also describes this case where the consumer are willing to travel furt
 According to the Alons's model dentist should locate close to the CBD for higher volume of sales.
 Dentist being placed further out in to other retail agglomeration areas can also be a good strategy.
 However, the dentist would then rely on the area having less competition so the rate between competition and population density are proportional.
-Our findings in QGIS shows that in areas of high population density, the number of dentist also is increase.
+Our findings in QGIS shows that in areas of high population density, the number of dentist also increase.
 The consumer/patient then has more to choose between and the dentist also has a bigger scale of potential customers.
 Where in smaller areas it is less competition and the dentist would appear to have somewhat of a monopoly since the transportation cost to the second closes dentist are noticeable higher.
 
@@ -317,15 +318,16 @@ This also takes away some of the competition and would support placement in more
 More-so, is important to notice that when passed 18 years of age, you could risk loosing your local public dentist due to lack of capacity.
 Suggesting some dentist might seek closer to CBD areas to capture most of the remaining part of the population.
 Business, public places and industry can have a positive effect on revenue since this is areas where most of the population spends their time during their day, either going to work, school and other errand.
-Reducing the transportation cost for the customer as they are already located in these areas even if they dont live here.
+Reducing the transportation cost for the customer as they are already located in these areas even if they do not live here.
 
 The bid rent models are under the assumption that Dentists use spatial completion to maximise profit.
-Nevertheless, the cost of dental care in Norway can vary depending on a number of factors such as the type of treatment, the location of the dental practice and the dentist experience and qualifications.
+Nevertheless, the cost of dental care in Norway can vary depending on a number of other factors such as the type of treatment, the location of the dental practice and the dentist experience and qualifications.
 The Norwegian Dental Association rate the average cost of check ups is between four to eight hundred Norwegian Krone's @tannlege.
 Bertrand model also take price as competitive advantage in to consideration.
 
 Viser data noe om indikasjon på dyrere priser i nærheten av større byer of hvor det er stedsbestemt monopol?
 Tjener tannleger i større byer mer?
+Her kan vi også skrive om gravitasjons modeller.
 
 Another Mashiallian point to be made could be the advantage of industry clusters.
 Taken for granted that the data on Dentist includes both "normal Dentists" and specialist.
@@ -344,7 +346,7 @@ Some critics argue that the development of large shopping malls has led to the d
 Information about Wine monopoly locations has also been studied in this paper.
 As the wine monopoly are anchor stores they may affect the attractiveness of the shopping mall @kanvin2014.
 The Norwegian government regulates the placements of wine monopoly stores in shopping malls to prevent completion with town centres @omsorgsdepartementet2022.
-More importanly, the government may take in to account the potential impact of exciting retail centres in the region.
+More importantly, the government may take in to account the potential impact of exciting retail centres in the region.
 This regional economic approach aim to promote sustainable development and balance economic growth across the country @kanvin2014.
 
 Hva viser informasjonen om vinmonopolet?
