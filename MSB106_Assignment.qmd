@@ -31,6 +31,8 @@ Dist_Mal_Dentist <- read.csv("Dist_Mal_Dentist.csv")
 NOR_OSM_SHOP_MAL <- read.csv("NOR_OSM_SHOP_MAL.csv")
 Zonal_Den <- read.csv("Zonal_Den.csv") |>
   select(fid, X_sum)
+Dist_Comp_Den <- read.csv("Dist_Comp_Den.csv") |>
+  select(fid, distance)
 NOR_KOMM <- read_csv("NOR_KOMM.csv")
 NOR_KOMM_2 <- read_csv("NOR_KOMM_2.csv")
 ```
@@ -49,6 +51,11 @@ Dentist_Data <- inner_join(Dist_Mal_Dentist, Dist_CBD_Dentist, by = "fid") |>
 
 ```{r}
 Dentist_Data <- inner_join(Dentist_Data, Zonal_Den, by = "fid")
+```
+
+```{r}
+Dentist_Data <- inner_join(Dentist_Data, Dist_Comp_Den, by = "fid") |>
+  rename("DistComp" = distance)
 ```
 
 ## Introduction
@@ -70,7 +77,11 @@ kable(summary(Dentist_Data[3:6]))
 ```
 
 ```{r}
-kable(summary(Dentist_Data[8:12]))
+kable(summary(Dentist_Data[8:11]))
+```
+
+```{r}
+kable(summary(Dentist_Data[11:14]))
 ```
 
 ```{r}
@@ -130,7 +141,7 @@ Dentist_Data_LIMIT |>
 
 ```{r}
 lm1 <- lm(Sum.salgsi ~ X_sum, data = Dentist_Data_LIMIT)
-lm2 <- lm(Sum.salgsi ~ DistCBD + DistMal + X_sum + (DistCBD*X_sum), data = Dentist_Data_LIMIT)
+lm2 <- lm(Sum.salgsi ~ DistComp + DistCBD + DistMal + X_sum + (DistCBD*X_sum), data = Dentist_Data_LIMIT)
 ```
 
 ```{r}
