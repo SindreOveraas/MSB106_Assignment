@@ -282,10 +282,11 @@ Dentist_Data_LIMIT |>
 
 **Econometric Approach**
 
-The question addressed are related to the geographical space of Norway.
+The questions addressed are related to the geographical space of Norway.
 Norway is a country with relatively small population and large heterogeneous land area.
 Furthermore, the population is decentralized with the majority of population living in urban areas.
 This unique spatial distribution of land might give a possible explanation to diversions from the simple theoretical models used in this paper.
+Whereas one of the assumptions are homogeneous landscape.
 Nevertheless, the way economies are organised comes partly from the emergence of centralities within a city.
 Transportation networks have the potential to increase sprawl depending on how the urban system evolves gradually.
 
@@ -299,7 +300,6 @@ Supporting, Marshall's agglomeration theory on knowledge spillovers, increasing 
 
 Furthermore, when using the dentist income (y) and comparing the distance from the mall (x), signs of patterns emerge showing that income is greater when the dentist is placed closer to the shopping mall.
 Furthermore, decreasing as the distance gets bigger.
-
 Faster transportation can increase convenience of commuting, increasing rent commuters from the city centre are willing to pay, and therefore increasing the area of developed land without this being necessary corresponding to an increase in population.
 Hence supporting findings; when the distance reach around 10km from the mall the income starts to increase before it decrease again around 20km.
 Also in line with the Keynesian theory suggesting that this pattern might take place as the transportation cost for individuals further away from the Shopping mall does not increase to much by travelling the extra distance.
@@ -342,10 +342,10 @@ However, the growth of shopping malls in Norway has not been without controversy
 Some critics argue that the development of large shopping malls has led to the decline of traditional shopping streets and local businesses, while other raise concerns about the environmental impact of these large scale commercial developments @kanvin2014.
 
 Information about Wine monopoly locations has also been studied in this paper.
-The Norwegian government regulates the placements of wine monopoly stores in shopping malls to prevent completion with town centres @omsorgsdepartementet2022.
-Subsequently, the government may take in to account the potential impact of exciting retail centres in the region.
-This regional economic approach aim to promote sustainable development and balance economic growth across the country @kanvin2014.
 As the wine monopoly are anchor stores they may affect the attractiveness of the shopping mall @kanvin2014.
+The Norwegian government regulates the placements of wine monopoly stores in shopping malls to prevent completion with town centres @omsorgsdepartementet2022.
+More importanly, the government may take in to account the potential impact of exciting retail centres in the region.
+This regional economic approach aim to promote sustainable development and balance economic growth across the country @kanvin2014.
 
 Hva viser informasjonen om vinmonopolet?
 
