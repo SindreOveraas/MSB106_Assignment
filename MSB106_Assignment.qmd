@@ -52,14 +52,15 @@ As an example, central questions in this assignment will be; "Is it more benefic
 
 Location theory gives regional economics its scientific disciplinary identity and constitutes its theoretical methodological core @capello2011.
 It has typically microeconomic foundation and uses theoretical models as well as adopting a statistical and geographical approach @capello2011.
-Furthermore, the theory uses the concept of externalities as disparities in the spatial distribution of activities, thereby laying the territorial bases for dynamic approaches @capello2011.
+Furthermore, the theory uses the concept of externalities in the spatial distribution of activities, thereby laying the territorial bases for dynamic approach to economic growth @capello2011.
 
 Regional growth theory involves spatial aspects of economic growth and territorial distribution of income @capello2011.
-It also involves generating geographical advantages, in terms of easy or difficult access of a particular area @capello2011.
+It also involves generating geographical advantages, in terms of easy or difficult access to a particular area @capello2011.
 
-Keynesian economics also emphasizes the importance of consumer demand in driving economic growth.
-In regional economics, this may involve policies that involve consumer spending, such as incentives for buying local products or supporting small businesses or in this case preventing the the death of down town due to competition from shopping malls.
-Subsequently, By increasing consumer demand, supporting business in a specific region and promoting economic growth or preventing economic decline @capello2016.
+Furthermore, Keynesian economics emphasizes the importance of consumer demand in driving economic growth.
+This may involve policies that involve consumer spending, such as incentives for buying local products or supporting small businesses or in this case preventing the the death of down town due to competition from shopping malls.
+Subsequently, increasing consumer demand, supporting business in a specific region.
+Promoting economic growth or preventing economic decline @capello2016.
 
 Harald Hotelling's locational equilibrium is determined by a logic of profit maximization whereby each producer controls its own market area.
 Productivity advantages of cities and urban clusters with a high density of firms increase profit by attracting a larger number of potential customers, and more productive workers @capello2011.
@@ -71,8 +72,8 @@ In gravitational models, the attractiveness of the retail location, represent th
 Furthermore, it depends on the variety of goods which can be purchased at the same location @mccann2013.
 
 The model of potential has the capacity to measure the potential of attractiveness to a place.
-Subsequently, the gravitational force is higher in bigger cities or more heavily populated areas.
-Furthermore, predicting places of future growth potential for firms, shopping malls or public service more specifically dentist practice @capello2015.
+Bigger cities or more heavily populated areas have a stronger gravitational force.
+A possible indicator to predict places of growth potential for dentist practice or shopping malls @capello2015.
 
 **Interdependent location choice, the Hotelling's model (1929)**
 
