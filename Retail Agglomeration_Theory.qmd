@@ -22,7 +22,7 @@ This study aims to examine the dental industry and find the strategy most profit
 
 The study utilize a quantitative research approach, employing spacial explanatory data analysis techniques to determine the location decisions of firms.
 Geographical data was collected from locations in Norway showing all dentists, central places, retail agglomeration and other points of interest such as the government regulated wine monopoly.
-Spatial regression analyses was used to identify the factors influencing the location decisions of firms.
+Combines with regional income data a spatial regression analyses was used to identify the factors influencing the location decisions of firms.
 
 Furthermore, the result indicates the distance to retail agglomeration areas and central places playes a significant role in the location decisions for firms.
 Firms are more likely to locate closer to these areas, which offer access to a larger customer base and lower cost of transportation.
@@ -37,18 +37,6 @@ Perhaps more importantly prevent agrassive retail agglomeration areas from "kill
 Our main task in this assignment is to perform an analysis of geospatial determinants of firm activity.
 More specifically we are to focus on the Norwegian dental industry in this regard, and see how geospatial determinants such as distances to shopping malls and CBDs (Central Business Districts), as well as population density can determine dental businesses income and general financial operations.
 As an example, central questions in this assignment will be; "Is it more beneficial to be highly centralized in urban areas with high population density and many competitors, or is it a greater advantage to be less centralized to the advantage that the nearest competing company is considerably further away?", "Which determinants appear to be most significant for economic benefit?"
-
-`A brief description of the problem and its importance CHECK`
-
-`Statement of purpose or what was done`
-
-`A brief description of main results`
-
-`Description of methodology, main challenges and solutions`
-
-`Discretion of the papers contribution in relation to previous research`
-
-`Organization of paper`
 
 **Hypothesis**
 
