@@ -10,7 +10,7 @@ format:
   margin-right: 2cm
 papersize: A4
 editor: visual
-bibliography: [references.bib, Mena.bib]
+bibliography: [references.bib, Mena.bib, Mona_Retail_Agglomeration.bib]
 ---
 
 ## Abstract
