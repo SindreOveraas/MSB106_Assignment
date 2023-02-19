@@ -281,6 +281,8 @@ Dentist_Data_LIMIT |>
 
 **Empirical Specification**
 
+Included why and why not outliner????
+
 **Econometric Approach**
 
 The questions addressed are related to the geographical space of Norway.
