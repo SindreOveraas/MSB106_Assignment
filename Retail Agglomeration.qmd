@@ -221,10 +221,9 @@ To obtain a first impression and a simple understanding of our data, we have dec
 The scatterplot presented in @fig-1 show the relationship of average spending on retail amongst inhabitants and the distance from geometrical commune centers to nearest malls, which indicate that most malls are in a 50 km radius of commune centers, and that Norwegians on average spend between 50 thousand to 120 thousand on retail.
 
 We furthermore have used plots to look at the relationship between the income of dentist\'s businesses and the distance from CBDs.
-In the first scatterplot we see some extreme figures of 1 billion+ income which we choose to ignore and deem as outliers, as we notice that these figures are accounting figures for an entire group of companies under the same legal name.
-By ignoring these outliers we are then left with the scatterplot in @fig-3. This scatterplot shows a tendency of a negative relationship between the variables, which might suggest that dentists might earn more closer to CBDs.
-The last scatterplots we have chosen to calculate is concerning the relationship of dentists EBIT which is earnings before interest and taxes, compared to their distances to the nearest shopping mall.
-Just as the previous scatterplot, we also see here a tendency of a negative relationship between the variables.
+The scatterplot in @fig-2 have some extreme figures of 1 billion+ income which we choose to ignore and deem as outliers, as we notice that these observations are accounting figures for an entire group of companies under the same legal name, and not individual companies.
+By ignoring these outliers we are then left with the scatterplot in @fig-3. This plot shows a tendency of a negative relationship between the variables, which might suggest that dentists might earn more closer to CBDs.
+The last scatterplots we have chosen to calculate is concerning the relationship of dentists EBIT which is earnings before interest and taxes, compared to their distances to the nearest shopping mall in @fig-4. Just as the previous scatterplot, we also see here a tendency of a negative relationship between the variables.
 A decent number of dentists run at a loss, having negative earnings before interest and taxes.
 
 

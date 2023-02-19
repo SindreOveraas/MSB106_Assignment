@@ -11,7 +11,7 @@ papersize: A4
 editor: visual
 ---
 
-```{r, message=FALSE}
+```{r, message=FALSE, echo=FALSE}
 library(rgdal)
 library(dplyr)
 library(RSQLite)
@@ -23,7 +23,7 @@ library(kableExtra)
 library(huxtable)
 ```
 
-```{r, message=FALSE}
+```{r, message=FALSE, echo=FALSE}
 NOR_CBD <- read_csv("NOR_CBD.csv")
 Dist_CBD_Dentist <- read_csv("Dist_CBD_Dentist.csv")
 Zonal_CBD <- read_csv("Zonal_CBD.csv")
@@ -38,66 +38,68 @@ NOR_KOMM <- read_csv("NOR_KOMM.csv")
 NOR_KOMM_2 <- read_csv("NOR_KOMM_2.csv")
 ```
 
-```{r}
+```{r, echo=FALSE}
 Commune_Data <- inner_join(NOR_KOMM, NOR_KOMM_2, by = "kommunenummer") |>
   select(kommunenummer, HubName, HubDist, Turnover_capita_retail_Omsetning) |>
   rename("knr" = kommunenummer, "DistMal" = HubDist, "Turnover_capita_retail" = Turnover_capita_retail_Omsetning)
 ```
 
-```{r}
+```{r, echo=FALSE}
 Commune_Data <- inner_join(Commune_Data, NOR_OSM_SHOP_MAL, by = "HubName") |>
   select(knr, DistMal, HubName, Turnover_capita_retail, shop, Vinmonopolet) |>
   rename("SizeMall" = shop, "Winemonopoly" = Vinmonopolet)
 ```
 
-```{r}
+```{r, echo=FALSE, warning=FALSE}
 Commune_Data$SizeMall <- as.numeric(Commune_Data$SizeMall)
 Commune_Data$Winemonopoly <- as.integer(as.logical(Commune_Data$Winemonopoly))
 ```
 
-```{r}
+```{r, echo=FALSE}
 Dentist_Data <- inner_join(Dist_Mal_Dentist, Dist_CBD_Dentist, by = "fid") |>
   select(fid, Juridisk.n, Antall.ans, Sum.Drifts, Sum.salgsi, Driftsresu.y, osm_id.y, latlong.y, HubName.y, HubDist.y, HubName.x, HubDist.x) |>
   rename("DistMal" = HubDist.x, "DistCBD" = HubDist.y, "HubName" = HubName.x, "HubNameCBD" = HubName.y, "Driftsres" = Driftsresu.y, "osm_id" = osm_id.y, "latlong" = latlong.y)
 ```
 
-```{r}
+```{r, echo=FALSE}
 Dentist_Data <- inner_join(Dentist_Data, Zonal_Den, by = "fid")
 ```
 
-```{r}
+```{r, echo=FALSE}
 Dentist_Data <- inner_join(Dentist_Data, Dist_Comp_Den, by = "fid") |>
   rename("DistComp" = distance)
 ```
 
-```{r}
+```{r, echo=FALSE}
 Dentist_Data <- left_join(Dentist_Data, NOR_OSM_SHOP_MAL, by = "HubName") |>
   select(fid, Juridisk.n, Antall.ans, Driftsres, Sum.salgsi, latlong, DistCBD, DistMal, X_sum, DistComp, shop, Vinmonopolet) |>
   rename("SizeMall" = shop, "Winemonopoly" = Vinmonopolet)
 ```
 
-```{r}
+```{r, echo=FALSE, warning=FALSE}
 Dentist_Data$SizeMall <- as.numeric(Dentist_Data$SizeMall)
 Dentist_Data$Winemonopoly <- as.integer(as.logical(Dentist_Data$Winemonopoly))
 ```
 
-```{r}
+```{r, echo=FALSE}
 kable(summary(Commune_Data))
 ```
 
-```{r}
+```{r, echo=FALSE}
 kable(summary(Dentist_Data[3:6]))
 ```
 
-```{r}
+```{r, echo=FALSE}
 kable(summary(Dentist_Data[7:10]))
 ```
 
-```{r}
+```{r, echo=FALSE}
 kable(summary(Dentist_Data[11:12]))
 ```
 
-```{r}
+```{r, echo=FALSE}
+#| label: fig-1
+#| tbl-cap: "Capita in retail compared to mall distance"
 Commune_Data |>
   ggplot(aes(x = SizeMall, y = Turnover_capita_retail, colour = SizeMall)) +
   geom_point(lwd = .9) +
@@ -105,7 +107,9 @@ Commune_Data |>
   theme_bw()
 ```
 
-```{r}
+```{r,echo=FALSE}
+#| label: fig-2
+#| tbl-cap: "Dentist income compared to CBD distance"
 Dentist_Data |>
   ggplot(aes(x = DistCBD, y = Sum.salgsi, colour = DistCBD)) +
   geom_point(lwd = .9) +
@@ -113,20 +117,20 @@ Dentist_Data |>
   theme_bw()
 ```
 
-```{r}
+```{r,echo=FALSE}
 Dentist_Data_LIMIT <- Dentist_Data |>
   filter(Sum.salgsi < 100000000, DistCBD < 250,
          Driftsres < 20000000, Driftsres > -5000000, DistMal < 80)
 ```
 
-```{r}
+```{r, echo=FALSE}
 Dentist_Data_LIMIT |>
   ggplot(aes(x = DistCBD, y = Sum.salgsi, colour = DistCBD)) +
   geom_point(lwd = .9) + labs(x = "Distance from CBD", y = "Income") +
   theme_bw()
 ```
 
-```{r}
+```{r, echo=FALSE}
 Dentist_Data |>
   ggplot(aes(x = DistMal, y = Driftsres, colour = DistMal)) +
   geom_point(lwd = .9) +
@@ -134,7 +138,7 @@ Dentist_Data |>
   theme_bw()
 ```
 
-```{r}
+```{r, echo=FALSE}
 Dentist_Data_LIMIT |>
   ggplot(aes(x = DistMal, y = Driftsres, colour = DistMal)) +
   geom_point(lwd = .9) +
@@ -142,7 +146,7 @@ Dentist_Data_LIMIT |>
   theme_bw()
 ```
 
-```{r}
+```{r, echo=FALSE}
 Dentist_Data_LIMIT |>
   ggplot(aes(x = X_sum, y = Sum.salgsi, colour = Sum.salgsi)) +
   geom_point(lwd = .9) +
@@ -150,29 +154,29 @@ Dentist_Data_LIMIT |>
   theme_bw()
 ```
 
-```{r}
+```{r, echo=FALSE}
 lm1 <- lm(Sum.salgsi ~ DistComp + DistMal + SizeMall + (DistMal*SizeMall) + DistCBD + X_sum + (DistCBD*X_sum), data = Dentist_Data_LIMIT)
 ```
 
-```{r}
+```{r, echo=FALSE}
 huxreg(list("Dentist Revenue" = lm1), statistics = c(N = "nobs", R2 = "r.squared"), const. = "(Intercept)", note = "Note: {stars} T statistics in brackets.")
 ```
 
-```{r}
+```{r, echo=FALSE}
 Den_W_Wine <- Dentist_Data_LIMIT |>
   filter(Winemonopoly == 1)
 ```
 
-```{r}
+```{r, echo=FALSE}
 Den_WO_Wine <- Dentist_Data_LIMIT |>
   filter(Winemonopoly == 0)
 ```
 
-```{r}
+```{r, echo=FALSE}
 lm2 <- lm(Turnover_capita_retail ~ DistMal + SizeMall + (DistMal*SizeMall) + Winemonopoly, data = Commune_Data)
 ```
 
-```{r}
+```{r, echo=FALSE}
 huxreg(list("Turnover per capita in retail" = lm2), statistics = c(N = "nobs", R2 = "r.squared"), const. = "(Intercept)", note = "Note: {stars} T statistics in brackets.")
 ```
 

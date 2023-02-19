@@ -197,27 +197,33 @@ Not to mention the upper hand of easy road access and free parking.
 
 **Data description**
 
-(Data and how it was collected)
+For this assignment we where provided with different geospatial data in the geographic information software QGIS to calculate the relationship of the different variables that might determine firm activity.
+This geospatial data included Norwegian commune data which contained the administrative boundaries of the Communes, presented in the software as different divisions of lines that distinguish the different commune boundaries.
+We where also provided with different point layers, such as the geometric centers of communes, urban city centers or Central Business Districts (CBD), all businesses in Norway which are regarded as dental services, and all Norwegian shopping malls.
+We where also provided with a QGIS layer with population density estimates, visualized with 100x100 raster graphics.
 
-**Empirical Specification**
+To carry out a more complete data analysis of the influencing factors of the activity of Norwegian dentist services, we had to collect more data than what we already had been presented with.
+We firstly utilized QGIS to calculate different other statistics and variables.
+Regarding the Norwegian shopping malls layer we added the variable "Wine-monopoly" as a false/ true variable to determine which Norwegian malls had a hard liquor store.
+We added the number of stores which are in each mall, to use as an estimate for the malls sizes.
+The malls opening hours have also been included in this layer.
+From SSB, we gathered data on the average municipal sales per inhabitant in retailing for each Norwegian commune.
+Lastly we created 2 kilometer buffer zones around dentists and CBDs to determine population density in these areas.
 
-Included why and why not outliner????
+After calculations in QGIS we transferred our data to RSTUDIO to do the primary statistical analysis of our data.
+The data is then merged into two different data frames.
+The first one containing Norwegian communes as the unit of observation, which includes geometric commune centers to the nearest mall, the retail per capita per commune, the different commune numbers and the size of the nearest mall, including the true/ false "Winemonopoly" variable.
+The second data frame use dentists as the unit of observations.
+This data frame include data on the distances from CBD to dentists, distances from dentists to the nearest mall, including variables of the mall size and the "Winemonopoly" variable, different significant accounting figures for the different dentist businesses, such as total sales revenue and EBIT (Earnings Before Interests and Taxes).
 
-**Estimation strategy**
+To obtain a first impression and a simple understanding of our data, we have decided to make use of scatterplots.
+The scatterplot presented in @fig-1 show the relationship of average spending on retail amongst inhabitants and the distance from geometrical commune centers to nearest malls, which indicate that most malls are in a 50 km radius of commune centers, and that Norwegians on average spend between 50 thousand to 120 thousand on retail.
 
-**Analytical framework**
-
-SEDA (Spatial Explanatory Data Analyses)
-
-Spatial data analysis is a rapidly growing area in Statistics @haslett1992.
-The Journal of the statistics society define such data as being objects in space, which objects have physical location.
-Furthermore, the analyses are spatial if these locations are relevant to the interpretation of the data @haining1998.
-
-The examination of the data involves the examination of data collected from q-gis maps; `it will involve little more. Graphical techniques for examining such maps are thus a central part of the methodology. A number of such techniques are discussed."` @haslett1992.
-
-`What data are used?`
-
-`What has been calculated?`
+We furthermore have used plots to look at the relationship between the income of dentist\'s businesses and the distance from CBDs.
+The scatterplot in @fig-2 have some extreme figures of 1 billion+ income which we choose to ignore and deem as outliers, as we notice that these observations are accounting figures for an entire group of companies under the same legal name, and not individual companies.
+By ignoring these outliers we are then left with the scatterplot in @fig-3. This plot shows a tendency of a negative relationship between the variables, which might suggest that dentists might earn more closer to CBDs.
+The last scatterplots we have chosen to calculate is concerning the relationship of dentists EBIT which is earnings before interest and taxes, compared to their distances to the nearest shopping mall in @fig-4. Just as the previous scatterplot, we also see here a tendency of a negative relationship between the variables.
+A decent number of dentists run at a loss, having negative earnings before interest and taxes.
 
 ## **Econometric Approach**
 
