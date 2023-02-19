@@ -94,11 +94,9 @@ Perhaps the simplest way to explain why there is a natural tendency for retailer
 **Hotelling-Bertand model (1979)**
 
 The Bertrand model was introduced as early as in 1883 and demonstrate two firms competing by simultaneously setting prices for their homogeneous products.
-Furthermore, the consumers choose the product with the lowest price.
-The model assumes that firms have identical production cost and consumers have perfect information about prices.
+Furthermore, the consumers choose the product with the lowest price@tolotti2020. The model assumes that firms have identical production cost and consumers have perfect information about prices @tolotti2020.
 
-By combining elements from the two models a hybrid model of spatial completion was birthed by Salop in 1979.
-In this model firms compete both in location and price, with consumers having a transportation cost and firms producing differentiated products.
+By combining elements from the two models a hybrid model of spatial completion was birthed by Salop in 1979 @tolotti2020. In this model firms compete both in location and price, with consumers having a transportation cost and firms producing differentiated products @tolotti2020.
 
 **Marshall's agglomeration principles**
 
@@ -211,7 +209,7 @@ In both cases growth potential would be compromised.
 Marshall also points out the competition within the geographical location.
 Hence, the marketplace and business districts give consumers low search and switching costs @capello2015.
 The fact that owners of stores seem to prefer highly concentrated shopping.
-More-so, it suggests that the sales volumes outweigh the loss attributed to greater price competition@capello2015.
+More-so, it suggests that the sales volumes outweigh the loss attributed to greater price competition\@capello2015.
 
 **Shopping Malls**
 
