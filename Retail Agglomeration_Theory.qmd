@@ -31,7 +31,7 @@ Our main task in this assignment is to perform an analysis of geospatial determi
 More specifically we are to focus on the Norwegian dental industry in this regard, and see how geospatial determinants such as distances to shopping malls and CBDs (Central Business Districts), as well as population density can determine dental businesses income and general financial operations.
 As an example, central questions in this assignment will be; "Is it more beneficial to be highly centralized in urban areas with high population density and many competitors, or is it a greater advantage to be less centralized to the advantage that the nearest competing company is considerably further away?", "Which determinants appear to be most significant for economic benefit?"
 
-`A brief description of the problem and its importance`
+`A brief description of the problem and its importance CHECK`
 
 `Statement of purpose or what was done`
 
