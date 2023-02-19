@@ -203,10 +203,9 @@ This geospatial data included Norwegian commune data which contained the adminis
 We where also provided with different point layers, such as the geometric centers of communes, urban city centers or Central Business Districts (CBD), all businesses in Norway which are regarded as dental services, and all Norwegian shopping malls.
 We where also provided with a QGIS layer with population density estimates, visualized with 100x100 raster graphics.
 
-
 To carry out a full-flegded data analysis of the influencing factors of the activity of Norwegian dentist services, we had to collect more data than what we already had been presented with.
 We firstly utilized QGIS to calculate different other statistics and variables.
-Regarding the Norwegian shopping malls layer we added the variable \"Wine-monopoly\" as a false/ true variable to determine which Norwegian malls, and also the number of stores which are in each mall.
+Regarding the Norwegian shopping malls layer we added the variable "Wine-monopoly" as a false/ true variable to determine which Norwegian malls, and also the number of stores which are in each mall.
 The malls opening hours have also been included in this layer.
 From SSB, we gathered data on the average municipal sales per inhabitant in retailing for each Norwegian commune.
 We also created 2 km buffer zones around dentists and CBDs to determine population density in these areas.

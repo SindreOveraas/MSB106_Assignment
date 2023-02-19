@@ -40,7 +40,17 @@ NOR_KOMM_2 <- read_csv("NOR_KOMM_2.csv")
 ```{r}
 Commune_Data <- inner_join(NOR_KOMM, NOR_KOMM_2, by = "kommunenummer") |>
   select(kommunenummer, HubName, HubDist, Turnover_capita_retail_Omsetning) |>
-  rename("knr" = kommunenummer, "DistMal" = HubDist, "HubNameMal" = HubName, "Turnover_capita_retail" = Turnover_capita_retail_Omsetning)
+  rename("knr" = kommunenummer, "DistMal" = HubDist, "fid" = HubName, "Turnover_capita_retail" = Turnover_capita_retail_Omsetning)
+```
+
+```{r}
+Commune_Data <- inner_join(Commune_Data, NOR_OSM_SHOP_MAL, by = "fid") |>
+  select(knr, DistMal, fid, Turnover_capita_retail, shop, Vinmonopolet) |>
+  rename("SizeMall" = shop, "Winemonopoly" = Vinmonopolet)
+```
+
+```{r}
+Commune_Data$SizeMall <- as.numeric(Commune_Data$SizeMall)
 ```
 
 ```{r}
@@ -56,6 +66,16 @@ Dentist_Data <- inner_join(Dentist_Data, Zonal_Den, by = "fid")
 ```{r}
 Dentist_Data <- inner_join(Dentist_Data, Dist_Comp_Den, by = "fid") |>
   rename("DistComp" = distance)
+```
+
+```{r}
+Dentist_Data <- left_join(Dentist_Data, NOR_OSM_SHOP_MAL, by = "fid") |>
+  select(fid, Juridisk.n, Antall.ans, Sum.Drifts, Sum.salgsi, latlong, DistCBD, DistMal, X_sum, DistComp, shop, Vinmonopolet) |>
+  rename("SizeMall" = shop, "Winemonopoly" = Vinmonopolet)
+```
+
+```{r}
+Dentist_Data$SizeMall <- as.numeric(Dentist_Data$SizeMall)
 ```
 
 ## Introduction
@@ -77,11 +97,11 @@ kable(summary(Dentist_Data[3:6]))
 ```
 
 ```{r}
-kable(summary(Dentist_Data[8:11]))
+kable(summary(Dentist_Data[7:10]))
 ```
 
 ```{r}
-kable(summary(Dentist_Data[11:14]))
+kable(summary(Dentist_Data[11:12]))
 ```
 
 ```{r}
@@ -105,7 +125,7 @@ Dentist_Data |>
 ```{r}
 Dentist_Data_LIMIT <- Dentist_Data |>
   filter(Sum.salgsi < 100000000, DistCBD < 250,
-         Driftsres < 20000000, Driftsres > -10000000, DistMal < 80)
+         Sum.Drifts < 20000000, Sum.Drifts > -10000000, DistMal < 80)
 ```
 
 ```{r}
@@ -117,7 +137,7 @@ Dentist_Data_LIMIT |>
 
 ```{r}
 Dentist_Data |>
-  ggplot(aes(x = DistMal, y = Driftsres, colour = DistMal)) +
+  ggplot(aes(x = DistMal, y = Sum.Drifts, colour = DistMal)) +
   geom_point(lwd = .9) +
   labs(x = "Distance from Mall", y = "EBIT") +
   theme_bw()
@@ -125,7 +145,7 @@ Dentist_Data |>
 
 ```{r}
 Dentist_Data_LIMIT |>
-  ggplot(aes(x = DistMal, y = Driftsres, colour = DistMal)) +
+  ggplot(aes(x = DistMal, y = Sum.Drifts, colour = DistMal)) +
   geom_point(lwd = .9) +
   labs(x = "Distance from Mall", y = "EBIT") +
   theme_bw()
@@ -140,12 +160,11 @@ Dentist_Data_LIMIT |>
 ```
 
 ```{r}
-lm1 <- lm(Sum.salgsi ~ X_sum, data = Dentist_Data_LIMIT)
-lm2 <- lm(Sum.salgsi ~ DistComp + DistCBD + DistMal + X_sum + (DistCBD*X_sum), data = Dentist_Data_LIMIT)
+lm1 <- lm(Sum.salgsi ~ DistComp + DistMal + SizeMall + (DistMal*SizeMall) + DistCBD + X_sum + (DistCBD*X_sum), data = Dentist_Data_LIMIT)
 ```
 
 ```{r}
-huxreg(list("Model 1" = lm1, "Model 2" = lm2), statistics = c(N = "nobs", R2 = "r.squared"), const. = "(Intercept)", note = "Note: {stars} T statistics in brackets.")
+huxreg(list("Dentist Sales" = lm1), statistics = c(N = "nobs", R2 = "r.squared"), const. = "(Intercept)", note = "Note: {stars} T statistics in brackets.")
 ```
 
 ## Econometric approach
