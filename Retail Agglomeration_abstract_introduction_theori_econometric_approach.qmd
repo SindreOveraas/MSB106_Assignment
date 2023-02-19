@@ -13,6 +13,82 @@ editor: visual
 bibliography: references.bib
 ---
 
+```{r, message=FALSE, echo=FALSE}
+library(rgdal)
+library(dplyr)
+library(RSQLite)
+library(sf)
+library(tidyverse)
+library(readr)
+library(ggplot2)
+library(kableExtra)
+library(huxtable)
+```
+
+```{r, message=FALSE, echo=FALSE}
+NOR_CBD <- read_csv("NOR_CBD.csv")
+Dist_CBD_Dentist <- read_csv("Dist_CBD_Dentist.csv")
+Zonal_CBD <- read_csv("Zonal_CBD.csv")
+Dist_Mal_Dentist <- read.csv("Dist_Mal_Dentist.csv")
+NOR_OSM_SHOP_MAL <- read.csv("NOR_OSM_SHOP_MAL.csv") |>
+  rename("HubName" = fid)
+Zonal_Den <- read.csv("Zonal_Den.csv") |>
+  select(fid, X_sum)
+Dist_Comp_Den <- read.csv("Dist_Comp_Den.csv") |>
+  select(fid, distance)
+NOR_KOMM <- read_csv("NOR_KOMM.csv")
+NOR_KOMM_2 <- read_csv("NOR_KOMM_2.csv")
+```
+
+```{r, echo=FALSE}
+Commune_Data <- inner_join(NOR_KOMM, NOR_KOMM_2, by = "kommunenummer") |>
+  select(kommunenummer, HubName, HubDist, Turnover_capita_retail_Omsetning) |>
+  rename("knr" = kommunenummer, "DistMal" = HubDist, "Turnover_capita_retail" = Turnover_capita_retail_Omsetning)
+```
+
+```{r, echo=FALSE}
+Commune_Data <- inner_join(Commune_Data, NOR_OSM_SHOP_MAL, by = "HubName") |>
+  select(knr, DistMal, HubName, Turnover_capita_retail, shop, Vinmonopolet) |>
+  rename("SizeMall" = shop, "Winemonopoly" = Vinmonopolet)
+```
+
+```{r, echo=FALSE, warning=FALSE}
+Commune_Data$SizeMall <- as.numeric(Commune_Data$SizeMall)
+Commune_Data$Winemonopoly <- as.integer(as.logical(Commune_Data$Winemonopoly))
+```
+
+```{r, echo=FALSE}
+Dentist_Data <- inner_join(Dist_Mal_Dentist, Dist_CBD_Dentist, by = "fid") |>
+  select(fid, Juridisk.n, Antall.ans, Sum.Drifts, Sum.salgsi, Driftsresu.y, osm_id.y, latlong.y, HubName.y, HubDist.y, HubName.x, HubDist.x) |>
+  rename("DistMal" = HubDist.x, "DistCBD" = HubDist.y, "HubName" = HubName.x, "HubNameCBD" = HubName.y, "Driftsres" = Driftsresu.y, "osm_id" = osm_id.y, "latlong" = latlong.y)
+```
+
+```{r, echo=FALSE}
+Dentist_Data <- inner_join(Dentist_Data, Zonal_Den, by = "fid")
+```
+
+```{r, echo=FALSE}
+Dentist_Data <- inner_join(Dentist_Data, Dist_Comp_Den, by = "fid") |>
+  rename("DistComp" = distance)
+```
+
+```{r, echo=FALSE}
+Dentist_Data <- left_join(Dentist_Data, NOR_OSM_SHOP_MAL, by = "HubName") |>
+  select(fid, Juridisk.n, Antall.ans, Driftsres, Sum.salgsi, latlong, DistCBD, DistMal, X_sum, DistComp, shop, Vinmonopolet) |>
+  rename("SizeMall" = shop, "Winemonopoly" = Vinmonopolet)
+```
+
+```{r, echo=FALSE, warning=FALSE}
+Dentist_Data$SizeMall <- as.numeric(Dentist_Data$SizeMall)
+Dentist_Data$Winemonopoly <- as.integer(as.logical(Dentist_Data$Winemonopoly))
+```
+
+```{r,echo=FALSE}
+Dentist_Data_LIMIT <- Dentist_Data |>
+  filter(Sum.salgsi < 100000000, DistCBD < 250,
+         Driftsres < 20000000, Driftsres > -5000000, DistMal < 80)
+```
+
 ## Abstract
 
 There are several factors to take in to consideration when deciding where a dental practice should be located.
@@ -343,6 +419,81 @@ This regional economic approach aim to promote sustainable development and balan
 
 Hva viser informasjonen om vinmonopolet?
 
+```{r, echo=FALSE}
+lm1 <- lm(Sum.salgsi ~ DistComp + DistMal + SizeMall + (DistMal*SizeMall) + DistCBD + X_sum + (DistCBD*X_sum), data = Dentist_Data_LIMIT)
+```
+
+```{r, echo=FALSE}
+#|label: tbl-4
+#|tbl-cap: "Dentist Revenue MRM"
+huxreg(list("Dentist Revenue" = lm1), statistics = c(N = "nobs", R2 = "r.squared"), const. = "(Intercept)", note = "Note: {stars} T statistics in brackets.")
+```
+
 ## Conclusion
 
 ## References
+
+## Appendix
+
+```{r, echo=FALSE}
+#|label: tbl-1
+#|tbl-cap: "Commune data summary"
+kable(summary(Commune_Data))
+```
+
+```{r, echo=FALSE}
+#|label: tbl-2
+#|tbl-cap: "Dentist data summary"
+kable(summary(Dentist_Data[3:6]))
+```
+
+```{r, echo=FALSE}
+#|label: tbl-3
+#|tbl-cap: "Dentist data summary"
+kable(summary(Dentist_Data[7:10]))
+```
+
+```{r, echo=FALSE}
+#|label: tbl-4
+#|tbl-cap: "Dentist data summary"
+kable(summary(Dentist_Data[11:12]))
+```
+
+```{r, echo=FALSE}
+#| label: fig-1
+#| fig-cap: "Capita in retail compared to mall distance"
+Commune_Data |>
+  ggplot(aes(x = SizeMall, y = Turnover_capita_retail, colour = SizeMall)) +
+  geom_point(lwd = .9) +
+  labs(x = "Distance from Mall", y = "Turnover capita in retail per inhabitant") +
+  theme_bw()
+```
+
+```{r,echo=FALSE}
+#| label: fig-2
+#| fig-cap: "Dentist income compared to CBD distance"
+Dentist_Data |>
+  ggplot(aes(x = DistCBD, y = Sum.salgsi, colour = DistCBD)) +
+  geom_point(lwd = .9) +
+  labs(x = "Distance from CBD", y = "Income") +
+  theme_bw()
+```
+
+```{r, echo=FALSE}
+#| label: fig-3
+#| fig-cap: "Dentist income compared to CBD distance"
+Dentist_Data_LIMIT |>
+  ggplot(aes(x = DistCBD, y = Sum.salgsi, colour = DistCBD)) +
+  geom_point(lwd = .9) + labs(x = "Distance from CBD", y = "Income") +
+  theme_bw()
+```
+
+```{r, echo=FALSE}
+#| label: fig-4
+#| fig-cap: "Dentist EBIT compared to Mall distance"
+Dentist_Data |>
+  ggplot(aes(x = DistMal, y = Driftsres, colour = DistMal)) +
+  geom_point(lwd = .9) +
+  labs(x = "Distance from Mall", y = "EBIT") +
+  theme_bw()
+```
