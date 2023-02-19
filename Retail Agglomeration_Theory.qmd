@@ -15,15 +15,22 @@ bibliography: references.bib
 
 ## Abstract
 
-`The topic of research (What was studied)`
+There are several factors to take in to consideration when deciding where a dental practice should be located.
+Spatial competition is a critical consideration in regional economics.
+Some of the factors influencing the decision making is retail agglomeration attributes, spatial monopoly and the attractiveness of a particular place of interest.
+This study aims to examine the dental industry and find the strategy most profitable for the dental industry.
 
-`The purpose (What was done)`
+The study utilize a quantitative research approach, employing spacial explanatory data analysis techniques to determine the location decisions of firms.
+Geographical data was collected from locations in Norway showing all dentists, central places, retail agglomeration and other points of interest such as the government regulated wine monopoly.
+Spatial regression analyses was used to identify the factors influencing the location decisions of firms.
 
-`The methodology (how the research was done)`
+Furthermore, the result indicates the distance to retail agglomeration areas and central places playes a significant role in the location decisions for firms.
+Firms are more likely to locate closer to these areas, which offer access to a larger customer base and lower cost of transportation.
+However, the results also suggest other factors, such as market size and completion also influence the location decisions for firms.
 
-`Main findings (what was found)`
-
-`Policy and implications (significance of findings)`
+The studies findings have particular implications for policy-makers, developer, and dental practises seeking to maximize profits through strategic decisions.
+By understanding the importance of proximity to retail agglomeration areas and central places, these stakeholders can make informed decisions that benefit the local economy and improve competitiveness of the region.
+Perhaps more importantly prevent agrassive retail agglomeration areas from "killing down town".
 
 ## Introduction
 
@@ -107,15 +114,24 @@ Firstly, knowledge spill-over within industries or product specific technologica
 Furthermore, market transactions in terms of value chain transactions with industry-specialized buyers and suppliers.
 Lastly, competition for specialized production factors such as labour and product market competition @nielsen2021.
 
-There are solidly established conclusions regarding the existence of agglomeration economies @puga2010. However, less proof of their estimated magnitude.
-Hence, identifying the causes of agglomeration economies, is proving more difficult @puga2010. Nevertheless, there is a large theoretical literature that develops these mechanisms @puga2010. @duranton2004 discuss these classifications and identify *learning, sharing* and *matching* as the main causes of agglomeration economies.
+There are solidly established conclusions regarding the existence of agglomeration economies @puga2010.
+However, less proof of their estimated magnitude.
+Hence, identifying the causes of agglomeration economies, is proving more difficult @puga2010.
+Nevertheless, there is a large theoretical literature that develops these mechanisms @puga2010.
+@duranton2004 discuss these classifications and identify *learning, sharing* and *matching* as the main causes of agglomeration economies.
 
 A larger market allows for a more efficient sharing of local infrastructure and facilities.
-Therefore, a variety of intermediate input suppliers, or a pool of workers with similar skills @puga2010. Despite higher rent the dental industry and shopping malls, seams to reap higher benefits in more populated areas as they are dependent on being located where there is a higher volume of patients in order to drive sales.
-The attraction for the consumers and users of public facilities is overall cost reduction @puga2010. Hence, the larger the population sharing facilities the lower the cost per user @puga2010. Presumably, industrial factories and business clusters are more dependent on being close to raw materials and industrial action.
+Therefore, a variety of intermediate input suppliers, or a pool of workers with similar skills @puga2010.
+Despite higher rent the dental industry and shopping malls, seams to reap higher benefits in more populated areas as they are dependent on being located where there is a higher volume of patients in order to drive sales.
+The attraction for the consumers and users of public facilities is overall cost reduction @puga2010.
+Hence, the larger the population sharing facilities the lower the cost per user @puga2010.
+Presumably, industrial factories and business clusters are more dependent on being close to raw materials and industrial action.
 
-Furthermore, a larger market also allows for a better matching between employers and employees, improved chances of finding suitable and better quality of matches @puga2010. Shopping malls require skilled workers to drive sales.
-However, they are not so dependent on highly educated workers as dentists whom according to resent study, tend to prefer bigger cities (as they are highly educated) @davis2020. More-so, cites provide a constant market for specialized skills and more productive work force @puga2010. Perhaps, a possibility for higher wages being compensated by more efficient workers in bigger agglomeration economies.
+Furthermore, a larger market also allows for a better matching between employers and employees, improved chances of finding suitable and better quality of matches @puga2010.
+Shopping malls require skilled workers to drive sales.
+However, they are not so dependent on highly educated workers as dentists whom according to resent study, tend to prefer bigger cities (as they are highly educated) @davis2020.
+More-so, cites provide a constant market for specialized skills and more productive work force @puga2010.
+Perhaps, a possibility for higher wages being compensated by more efficient workers in bigger agglomeration economies.
 That said the Norwegian cities might differ from the american cites in the study, as the population and clusters are no where near the same size.
 Lastly, a larger market can also facilitate learning by promoting the development and widespread adaptation of new technologies and business practice @puga2010.
 
