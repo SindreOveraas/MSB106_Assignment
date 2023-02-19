@@ -1,6 +1,7 @@
 ---
-title: "MSB106_Assignment"
-author: "Sindre H. Øveraas, Alen Colakovic, Mona Lisa Jones & Sebastian M. Fløysand"
+title: "Regional and Urban Economics"
+subtitle: Dental industry
+author: "Sindre Halvorsen Øveraas , Sebastian Mena Fløysand, Alen Colakovic & Mona Lisa Jones"
 format:
  pdf:
   fontsize: "10"
@@ -9,38 +10,10 @@ format:
   margin-right: 2cm
 papersize: A4
 editor: visual
+bibliography: references.bib
 ---
 
-```{r, message=FALSE}
-library(rgdal)
-library(dplyr)
-library(RSQLite)
-library(sf)
-library(tidyverse)
-library(readr)
-```
-
-```{r, message=FALSE}
-NOR_CBD <- read_csv("NOR_CBD.csv")
-Dist_CBD_Dentist <- read_csv("Dist_CBD_Dentist.csv")
-Buffer_CBD <- read_csv("Buffer_CBD.csv")
-Dist_Mal_Dentist <- read.csv("Dist_Mal_Dentist.csv")
-NOR_OSM_SHOP_MAL <- read.csv("NOR_OSM_SHOP_MAL.csv")
-Buffer_den <- read.csv("Buffer_den.csv")
-NOR_KOMM <- read_csv("NOR_KOMM.csv")
-NOR_KOMM_2 <- read_csv("NOR_KOMM_2.csv")
-```
-
-```{r}
-Commune_Data <- inner_join(NOR_KOMM, NOR_KOMM_2, by = "kommunenummer") |>
-  select(kommunenummer, HubName, HubDist, Turnover_capita_retail_Omsetning)
-```
-
-```{r}
-Dentist_Data <- inner_join(Dist_Mal_Dentist, Dist_CBD_Dentist, by = "fid") |>
-  select(fid, Juridisk.n, Antall.ans, Sum.Drifts, Sum.salgsi, Driftsresu.y, osm_id.y, latlong.y, HubName.y, HubDist.y, HubName.x, HubDist.x) |>
-  rename("DistMal" = HubDist.x, "DistCBD" = HubDist.y, "HubNameMal" = HubName.x, "HubNameCBD" = HubName.y)
-```
+## Abstract
 
 ## Introduction
 
@@ -48,7 +21,15 @@ Our main task in this assignment is to perform an analysis of geospatial determi
 More specifically we are to focus on the Norwegian dental industry in this regard, and see how geospatial determinants such as distances to shopping malls and CBDs (Central Business Districts), as well as population density can determine dental businesses income and general financial operations.
 As an example, central questions in this assignment will be; "Is it more beneficial to be highly centralized in urban areas with high population density and many competitors, or is it a greater advantage to be less centralized to the advantage that the nearest competing company is considerably further away?", "Which determinants appear to be most significant for economic benefit?"
 
-## Theoretical Foundation of Hypothesis
+**Hypothesis**
+
+The location choice of firms providing service to end consumers, significantly determine their ultimate growth potential.
+
+**Research question**
+
+What is the most profitable location for dental practice?
+
+## Theoretical Framework
 
 Location theory gives regional economics its scientific disciplinary identity and constitutes its theoretical methodological core @capello2011.
 It has typically microeconomic foundation and uses theoretical models as well as adopting a statistical and geographical approach @capello2011.
@@ -210,9 +191,35 @@ A possible reason for this is so called "predatory malls" which are purposely bu
 Perhaps more so if malls cater for cinema, restaurants, bars and other attributes in conjunction with the city centre.
 Not to mention the upper hand of easy road access and free parking.
 
-## Data description
+## Data
 
-## Econometric approach
+`In quantitative studies this section provides details about dataset, variables, instruments and measurement procedures used in the study. If the data was collected by the authors this section will describe how the sample was collected. If specific instruments were constructed to collect the data they will be described here and included in the appendix. Procedures used to measure variables are often described in sufficient detail to permit replication. In economic papers, this section describes the empirical model and estimation strategy used by the authors.`
+
+**Data description**
+
+(Data and how it was collected)
+
+**Empirical Specification**
+
+Included why and why not outliner????
+
+**Estimation strategy**
+
+**Analytical framework**
+
+SEDA (Spatial Explanatory Data Analyses)
+
+Spatial data analysis is a rapidly growing area in Statistics @haslett1992.
+The Journal of the statistics society define such data as being objects in space, which objects have physical location.
+Furthermore, the analyses are spatial if these locations are relevant to the interpretation of the data @haining1998.
+
+The examination of the data involves the examination of data collected from q-gis maps; `it will involve little more. Graphical techniques for examining such maps are thus a central part of the methodology. A number of such techniques are discussed."` @haslett1992.
+
+`What data are used?`
+
+`What has been calculated?`
+
+## **Econometric Approach**
 
 The questions addressed are related to the geographical space of Norway.
 Norway is a country with relatively small population and large heterogeneous land area.
@@ -281,3 +288,7 @@ More importantly, the government may take in to account the potential impact of 
 This regional economic approach aim to promote sustainable development and balance economic growth across the country @kanvin2014.
 
 Hva viser informasjonen om vinmonopolet?
+
+## Conclusion
+
+## References
