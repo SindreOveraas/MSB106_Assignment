@@ -82,24 +82,32 @@ Dentist_Data$Winemonopoly <- as.integer(as.logical(Dentist_Data$Winemonopoly))
 ```
 
 ```{r, echo=FALSE}
+#|label: tbl-1
+#|tbl-cap: "Commune data summary"
 kable(summary(Commune_Data))
 ```
 
 ```{r, echo=FALSE}
+#|label: tbl-2
+#|tbl-cap: "Dentist data summary"
 kable(summary(Dentist_Data[3:6]))
 ```
 
 ```{r, echo=FALSE}
+#|label: tbl-3
+#|tbl-cap: "Dentist data summary"
 kable(summary(Dentist_Data[7:10]))
 ```
 
 ```{r, echo=FALSE}
+#|label: tbl-4
+#|tbl-cap: "Dentist data summary"
 kable(summary(Dentist_Data[11:12]))
 ```
 
 ```{r, echo=FALSE}
 #| label: fig-1
-#| tbl-cap: "Capita in retail compared to mall distance"
+#| fig-cap: "Capita in retail compared to mall distance"
 Commune_Data |>
   ggplot(aes(x = SizeMall, y = Turnover_capita_retail, colour = SizeMall)) +
   geom_point(lwd = .9) +
@@ -109,7 +117,7 @@ Commune_Data |>
 
 ```{r,echo=FALSE}
 #| label: fig-2
-#| tbl-cap: "Dentist income compared to CBD distance"
+#| fig-cap: "Dentist income compared to CBD distance"
 Dentist_Data |>
   ggplot(aes(x = DistCBD, y = Sum.salgsi, colour = DistCBD)) +
   geom_point(lwd = .9) +
@@ -124,6 +132,8 @@ Dentist_Data_LIMIT <- Dentist_Data |>
 ```
 
 ```{r, echo=FALSE}
+#| label: fig-3
+#| fig-cap: "Dentist income compared to CBD distance"
 Dentist_Data_LIMIT |>
   ggplot(aes(x = DistCBD, y = Sum.salgsi, colour = DistCBD)) +
   geom_point(lwd = .9) + labs(x = "Distance from CBD", y = "Income") +
@@ -131,6 +141,8 @@ Dentist_Data_LIMIT |>
 ```
 
 ```{r, echo=FALSE}
+#| label: fig-4
+#| fig-cap: "Dentist EBIT compared to Mall distance"
 Dentist_Data |>
   ggplot(aes(x = DistMal, y = Driftsres, colour = DistMal)) +
   geom_point(lwd = .9) +
@@ -159,6 +171,8 @@ lm1 <- lm(Sum.salgsi ~ DistComp + DistMal + SizeMall + (DistMal*SizeMall) + Dist
 ```
 
 ```{r, echo=FALSE}
+#|label: tbl-4
+#|tbl-cap: "Dentist Revenue MRM"
 huxreg(list("Dentist Revenue" = lm1), statistics = c(N = "nobs", R2 = "r.squared"), const. = "(Intercept)", note = "Note: {stars} T statistics in brackets.")
 ```
 
@@ -177,6 +191,8 @@ lm2 <- lm(Turnover_capita_retail ~ DistMal + SizeMall + (DistMal*SizeMall) + Win
 ```
 
 ```{r, echo=FALSE}
+#|label: tbl-5
+#|tbl-cap: "Turnover per capita retail MRM"
 huxreg(list("Turnover per capita in retail" = lm2), statistics = c(N = "nobs", R2 = "r.squared"), const. = "(Intercept)", note = "Note: {stars} T statistics in brackets.")
 ```
 
