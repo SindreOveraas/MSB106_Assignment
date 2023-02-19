@@ -28,7 +28,8 @@ NOR_CBD <- read_csv("NOR_CBD.csv")
 Dist_CBD_Dentist <- read_csv("Dist_CBD_Dentist.csv")
 Zonal_CBD <- read_csv("Zonal_CBD.csv")
 Dist_Mal_Dentist <- read.csv("Dist_Mal_Dentist.csv")
-NOR_OSM_SHOP_MAL <- read.csv("NOR_OSM_SHOP_MAL.csv")
+NOR_OSM_SHOP_MAL <- read.csv("NOR_OSM_SHOP_MAL.csv") |>
+  rename("HubName" = fid)
 Zonal_Den <- read.csv("Zonal_Den.csv") |>
   select(fid, X_sum)
 Dist_Comp_Den <- read.csv("Dist_Comp_Den.csv") |>
@@ -40,23 +41,24 @@ NOR_KOMM_2 <- read_csv("NOR_KOMM_2.csv")
 ```{r}
 Commune_Data <- inner_join(NOR_KOMM, NOR_KOMM_2, by = "kommunenummer") |>
   select(kommunenummer, HubName, HubDist, Turnover_capita_retail_Omsetning) |>
-  rename("knr" = kommunenummer, "DistMal" = HubDist, "fid" = HubName, "Turnover_capita_retail" = Turnover_capita_retail_Omsetning)
+  rename("knr" = kommunenummer, "DistMal" = HubDist, "Turnover_capita_retail" = Turnover_capita_retail_Omsetning)
 ```
 
 ```{r}
-Commune_Data <- inner_join(Commune_Data, NOR_OSM_SHOP_MAL, by = "fid") |>
-  select(knr, DistMal, fid, Turnover_capita_retail, shop, Vinmonopolet) |>
+Commune_Data <- inner_join(Commune_Data, NOR_OSM_SHOP_MAL, by = "HubName") |>
+  select(knr, DistMal, HubName, Turnover_capita_retail, shop, Vinmonopolet) |>
   rename("SizeMall" = shop, "Winemonopoly" = Vinmonopolet)
 ```
 
 ```{r}
 Commune_Data$SizeMall <- as.numeric(Commune_Data$SizeMall)
+Commune_Data$Winemonopoly <- as.integer(as.logical(Commune_Data$Winemonopoly))
 ```
 
 ```{r}
 Dentist_Data <- inner_join(Dist_Mal_Dentist, Dist_CBD_Dentist, by = "fid") |>
   select(fid, Juridisk.n, Antall.ans, Sum.Drifts, Sum.salgsi, Driftsresu.y, osm_id.y, latlong.y, HubName.y, HubDist.y, HubName.x, HubDist.x) |>
-  rename("DistMal" = HubDist.x, "DistCBD" = HubDist.y, "HubNameMal" = HubName.x, "HubNameCBD" = HubName.y, "Driftsres" = Driftsresu.y, "osm_id" = osm_id.y, "latlong" = latlong.y)
+  rename("DistMal" = HubDist.x, "DistCBD" = HubDist.y, "HubName" = HubName.x, "HubNameCBD" = HubName.y, "Driftsres" = Driftsresu.y, "osm_id" = osm_id.y, "latlong" = latlong.y)
 ```
 
 ```{r}
@@ -69,24 +71,15 @@ Dentist_Data <- inner_join(Dentist_Data, Dist_Comp_Den, by = "fid") |>
 ```
 
 ```{r}
-Dentist_Data <- left_join(Dentist_Data, NOR_OSM_SHOP_MAL, by = "fid") |>
-  select(fid, Juridisk.n, Antall.ans, Sum.Drifts, Sum.salgsi, latlong, DistCBD, DistMal, X_sum, DistComp, shop, Vinmonopolet) |>
+Dentist_Data <- left_join(Dentist_Data, NOR_OSM_SHOP_MAL, by = "HubName") |>
+  select(fid, Juridisk.n, Antall.ans, Driftsres, Sum.salgsi, latlong, DistCBD, DistMal, X_sum, DistComp, shop, Vinmonopolet) |>
   rename("SizeMall" = shop, "Winemonopoly" = Vinmonopolet)
 ```
 
 ```{r}
 Dentist_Data$SizeMall <- as.numeric(Dentist_Data$SizeMall)
+Dentist_Data$Winemonopoly <- as.integer(as.logical(Dentist_Data$Winemonopoly))
 ```
-
-## Introduction
-
-Our main task in this assignment is to perform an analysis of geospatial determinants of firm activity.
-More specifically we are to focus on the Norwegian dental industry in this regard, and see how geospatial determinants such as distances to shopping malls and CBDs (Central Business Districts), as well as population density can determine dental businesses income and general financial operations.
-As an example, central questions in this assignment will be; "Is it more beneficial to be highly centralized in urban areas with high population density and many competitors, or is it a greater advantage to be less centralized to the advantage that the nearest competing company is considerably further away?", "Which determinants appear to be most significant for economic benefit?"
-
-## Theoretical Foundation of Hypothesis
-
-## Data description
 
 ```{r}
 kable(summary(Commune_Data))
@@ -106,13 +99,11 @@ kable(summary(Dentist_Data[11:12]))
 
 ```{r}
 Commune_Data |>
-  ggplot(aes(x = DistMal, y = Turnover_capita_retail, colour = DistMal)) +
+  ggplot(aes(x = SizeMall, y = Turnover_capita_retail, colour = SizeMall)) +
   geom_point(lwd = .9) +
   labs(x = "Distance from Mall", y = "Turnover capita in retail per inhabitant") +
   theme_bw()
 ```
-
-Might be more appropriate to explore the distance from CBDs to Malls compared to turnover capita in retail per inhabitant, rather than the distance from the geographical centroid of Norwegian Communes, because of the tendency of bigger population density around CBDs.
 
 ```{r}
 Dentist_Data |>
@@ -125,7 +116,7 @@ Dentist_Data |>
 ```{r}
 Dentist_Data_LIMIT <- Dentist_Data |>
   filter(Sum.salgsi < 100000000, DistCBD < 250,
-         Sum.Drifts < 20000000, Sum.Drifts > -10000000, DistMal < 80)
+         Driftsres < 20000000, Driftsres > -5000000, DistMal < 80)
 ```
 
 ```{r}
@@ -137,7 +128,7 @@ Dentist_Data_LIMIT |>
 
 ```{r}
 Dentist_Data |>
-  ggplot(aes(x = DistMal, y = Sum.Drifts, colour = DistMal)) +
+  ggplot(aes(x = DistMal, y = Driftsres, colour = DistMal)) +
   geom_point(lwd = .9) +
   labs(x = "Distance from Mall", y = "EBIT") +
   theme_bw()
@@ -145,7 +136,7 @@ Dentist_Data |>
 
 ```{r}
 Dentist_Data_LIMIT |>
-  ggplot(aes(x = DistMal, y = Sum.Drifts, colour = DistMal)) +
+  ggplot(aes(x = DistMal, y = Driftsres, colour = DistMal)) +
   geom_point(lwd = .9) +
   labs(x = "Distance from Mall", y = "EBIT") +
   theme_bw()
@@ -164,7 +155,25 @@ lm1 <- lm(Sum.salgsi ~ DistComp + DistMal + SizeMall + (DistMal*SizeMall) + Dist
 ```
 
 ```{r}
-huxreg(list("Dentist Sales" = lm1), statistics = c(N = "nobs", R2 = "r.squared"), const. = "(Intercept)", note = "Note: {stars} T statistics in brackets.")
+huxreg(list("Dentist Revenue" = lm1), statistics = c(N = "nobs", R2 = "r.squared"), const. = "(Intercept)", note = "Note: {stars} T statistics in brackets.")
+```
+
+```{r}
+Den_W_Wine <- Dentist_Data_LIMIT |>
+  filter(Winemonopoly == 1)
+```
+
+```{r}
+Den_WO_Wine <- Dentist_Data_LIMIT |>
+  filter(Winemonopoly == 0)
+```
+
+```{r}
+lm2 <- lm(Turnover_capita_retail ~ DistMal + SizeMall + (DistMal*SizeMall) + Winemonopoly, data = Commune_Data)
+```
+
+```{r}
+huxreg(list("Turnover per capita in retail" = lm2), statistics = c(N = "nobs", R2 = "r.squared"), const. = "(Intercept)", note = "Note: {stars} T statistics in brackets.")
 ```
 
 ## Econometric approach
