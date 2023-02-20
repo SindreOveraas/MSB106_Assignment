@@ -286,7 +286,7 @@ Reducing the transportation cost for the customer as they are already located in
 
 The bid rent models are under the assumption that Dentists use spatial completion to maximise profit.
 Nevertheless, the cost of dental care in Norway can vary depending on a number of other factors such as the type of treatment, the location of the dental practice and the dentist experience and qualifications.
-The Norwegian Dental Association rate the average cost of check ups is between four to eight hundred Norwegian Krone's \@tannlege.
+The Norwegian Dental Association rate the average cost of check ups is between four to eight hundred Norwegian Krone's [@TannlegeforeningenTannlegeforeningen].
 Bertrand model also take price as competitive advantage in to consideration.
 
 Another Mashiallian point to be made could be the advantage of industry clusters.
@@ -298,8 +298,8 @@ The access to work force in these areas would also be good and will be within th
 \
 Shopping malls have a relatively short history in Norway, with the first shopping mall opening in the late sixties.
 Prior to the most retail activities took place in the city centre.
-Furthermore, these malls typically featured a mix of shops, restaurants and entertainment options, and they were often located in suburban areas or on the outskirts of cities \@home-n.
-In resent years, there has been a trend towards larger and more comprehensive shopping malls in Norway \@home-n.
+Furthermore, these malls typically featured a mix of shops, restaurants and entertainment options, and they were often located in suburban areas or on the outskirts of cities [@NCSCNCSC2018].
+In resent years, there has been a trend towards larger and more comprehensive shopping malls in Norway [@NCSCNCSC2018].
 
 However, the growth of shopping malls in Norway has not been without controversy.
 Some critics argue that the development of large shopping malls has led to the decline of traditional shopping streets and local businesses, while other raise concerns about the environmental impact of these large scale commercial developments \@kanvin2014.
