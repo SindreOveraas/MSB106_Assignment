@@ -1,5 +1,5 @@
 ---
-title: "MSB106_Assignment"
+title: "MSB106 - Assignment"
 author: "Sindre H. Øveraas, Alen Colakovic, Mona Lisa Jones & Sebastian M. Fløysand"
 format:
  pdf:
@@ -18,38 +18,264 @@ library(RSQLite)
 library(sf)
 library(tidyverse)
 library(readr)
+library(ggplot2)
+library(kableExtra)
+library(huxtable)
 ```
 
 ```{r, message=FALSE}
 NOR_CBD <- read_csv("NOR_CBD.csv")
 Dist_CBD_Dentist <- read_csv("Dist_CBD_Dentist.csv")
-Buffer_CBD <- read_csv("Buffer_CBD.csv")
+Zonal_CBD <- read_csv("Zonal_CBD.csv")
 Dist_Mal_Dentist <- read.csv("Dist_Mal_Dentist.csv")
-NOR_OSM_SHOP_MAL <- read.csv("NOR_OSM_SHOP_MAL.csv")
-Buffer_den <- read.csv("Buffer_den.csv")
+NOR_OSM_SHOP_MAL <- read.csv("NOR_OSM_SHOP_MAL.csv") |>
+  rename("HubName" = fid)
+Zonal_Den <- read.csv("Zonal_Den.csv") |>
+  select(fid, X_sum)
+Dist_Comp_Den <- read.csv("Dist_Comp_Den.csv") |>
+  select(fid, distance)
 NOR_KOMM <- read_csv("NOR_KOMM.csv")
 NOR_KOMM_2 <- read_csv("NOR_KOMM_2.csv")
 ```
 
 ```{r}
 Commune_Data <- inner_join(NOR_KOMM, NOR_KOMM_2, by = "kommunenummer") |>
-  select(kommunenummer, HubName, HubDist, Turnover_capita_retail_Omsetning)
+  select(kommunenummer, HubName, HubDist, Turnover_capita_retail_Omsetning) |>
+  rename("knr" = kommunenummer, "DistMal" = HubDist, "Turnover_capita_retail" = Turnover_capita_retail_Omsetning)
+```
+
+```{r}
+Commune_Data <- inner_join(Commune_Data, NOR_OSM_SHOP_MAL, by = "HubName") |>
+  select(knr, DistMal, HubName, Turnover_capita_retail, shop, Vinmonopolet) |>
+  rename("SizeMall" = shop, "Winemonopoly" = Vinmonopolet)
+```
+
+```{r}
+Commune_Data$SizeMall <- as.numeric(Commune_Data$SizeMall)
+Commune_Data$Winemonopoly <- as.integer(as.logical(Commune_Data$Winemonopoly))
 ```
 
 ```{r}
 Dentist_Data <- inner_join(Dist_Mal_Dentist, Dist_CBD_Dentist, by = "fid") |>
   select(fid, Juridisk.n, Antall.ans, Sum.Drifts, Sum.salgsi, Driftsresu.y, osm_id.y, latlong.y, HubName.y, HubDist.y, HubName.x, HubDist.x) |>
-  rename("DistMal" = HubDist.x, "DistCBD" = HubDist.y, "HubNameMal" = HubName.x, "HubNameCBD" = HubName.y)
+  rename("DistMal" = HubDist.x, "DistCBD" = HubDist.y, "HubName" = HubName.x, "HubNameCBD" = HubName.y, "Driftsres" = Driftsresu.y, "osm_id" = osm_id.y, "latlong" = latlong.y)
 ```
 
-## Introduction
+```{r}
+Dentist_Data <- inner_join(Dentist_Data, Zonal_Den, by = "fid")
+```
 
-Our main task in this assignment is to perform an analysis of geospatial determinants of firm activity.
-More specifically we are to focus on the Norwegian dental industry in this regard, and see how geospatial determinants such as distances to shopping malls and CBDs (Central Business Districts), as well as population density can determine dental businesses income and general financial operations.
-As an example, central questions in this assignment will be; "Is it more beneficial to be highly centralized in urban areas with high population density and many competitors, or is it a greater advantage to be less centralized to the advantage that the nearest competing company is considerably further away?", "Which determinants appear to be most significant for economic benefit?"
+```{r}
+Dentist_Data <- inner_join(Dentist_Data, Dist_Comp_Den, by = "fid") |>
+  rename("DistComp" = distance)
+```
 
-## Theoretical Foundation of Hypothesis
+```{r}
+Dentist_Data <- left_join(Dentist_Data, NOR_OSM_SHOP_MAL, by = "HubName") |>
+  select(fid, Juridisk.n, Antall.ans, Driftsres, Sum.salgsi, latlong, DistCBD, DistMal, X_sum, DistComp, shop, Vinmonopolet) |>
+  rename("SizeMall" = shop, "Winemonopoly" = Vinmonopolet)
+```
 
-## Data description
+```{r}
+Dentist_Data$SizeMall <- as.numeric(Dentist_Data$SizeMall)
+Dentist_Data$Winemonopoly <- as.integer(as.logical(Dentist_Data$Winemonopoly))
+```
+
+```{r}
+kable(summary(Commune_Data))
+```
+
+```{r}
+kable(summary(Dentist_Data[3:6]))
+```
+
+```{r}
+kable(summary(Dentist_Data[7:10]))
+```
+
+```{r}
+kable(summary(Dentist_Data[11:12]))
+```
+
+```{r}
+Commune_Data |>
+  ggplot(aes(x = SizeMall, y = Turnover_capita_retail, colour = SizeMall)) +
+  geom_point(lwd = .9) +
+  labs(x = "Distance from Mall", y = "Turnover capita in retail per inhabitant") +
+  theme_bw()
+```
+
+```{r}
+Dentist_Data |>
+  ggplot(aes(x = DistCBD, y = Sum.salgsi, colour = DistCBD)) +
+  geom_point(lwd = .9) +
+  labs(x = "Distance from CBD", y = "Income") +
+  theme_bw()
+```
+
+```{r}
+Dentist_Data_LIMIT <- Dentist_Data |>
+  filter(Sum.salgsi < 100000000, DistCBD < 250,
+         Driftsres < 20000000, Driftsres > -5000000, DistMal < 80)
+```
+
+```{r}
+Dentist_Data_LIMIT |>
+  ggplot(aes(x = DistCBD, y = Sum.salgsi, colour = DistCBD)) +
+  geom_point(lwd = .9) + labs(x = "Distance from CBD", y = "Income") +
+  theme_bw()
+```
+
+```{r}
+Dentist_Data |>
+  ggplot(aes(x = DistMal, y = Driftsres, colour = DistMal)) +
+  geom_point(lwd = .9) +
+  labs(x = "Distance from Mall", y = "EBIT") +
+  theme_bw()
+```
+
+```{r}
+Dentist_Data_LIMIT |>
+  ggplot(aes(x = DistMal, y = Driftsres, colour = DistMal)) +
+  geom_point(lwd = .9) +
+  labs(x = "Distance from Mall", y = "EBIT") +
+  theme_bw()
+```
+
+```{r}
+Dentist_Data_LIMIT |>
+  ggplot(aes(x = X_sum, y = Sum.salgsi, colour = Sum.salgsi)) +
+  geom_point(lwd = .9) +
+  labs(x = "Pop density", y = "Income") +
+  theme_bw()
+```
+
+```{r}
+lm1 <- lm(Sum.salgsi ~ DistComp + DistMal + SizeMall + (DistMal*SizeMall) + DistCBD + X_sum + (DistCBD*X_sum), data = Dentist_Data_LIMIT)
+```
+
+```{r}
+huxreg(list("Dentist Revenue" = lm1), statistics = c(N = "nobs", R2 = "r.squared"), const. = "(Intercept)", note = "Note: {stars} T statistics in brackets.")
+```
+
+```{r}
+Den_W_Wine <- Dentist_Data_LIMIT |>
+  filter(Winemonopoly == 1)
+```
+
+```{r}
+Den_WO_Wine <- Dentist_Data_LIMIT |>
+  filter(Winemonopoly == 0)
+```
+
+```{r}
+lm2 <- lm(Turnover_capita_retail ~ DistMal + SizeMall + (DistMal*SizeMall) + Winemonopoly, data = Commune_Data)
+```
+
+```{r}
+huxreg(list("Turnover per capita in retail" = lm2), statistics = c(N = "nobs", R2 = "r.squared"), const. = "(Intercept)", note = "Note: {stars} T statistics in brackets.")
+```
 
 ## Econometric approach
+
+The questions addressed are related to the geographical space of Norway.
+Norway is a country with relatively small population and large heterogeneous land area.
+Furthermore, the population is decentralized with the majority of population living in urban areas.
+This unique spatial distribution of land might give a possible explanation to diversions from the simple theoretical models used in this paper.
+Whereas one of the assumptions are homogeneous landscape.
+Nevertheless, the way economies are organised comes partly from the emergence of centralities within a city.
+Transportation networks have the potential to increase sprawl depending on how the urban system evolves gradually.
+
+The results from the bid rent configuration from the city centre gave the opportunity to explore other locations in each municipality's.
+Having an urban system of multiple centres and applying the same logic of the model to other retail agglomeration areas.
+Resulting in finding relationships based on three different types of distance measurements.
+Firstly, the distance between Dental Practice and CBD then, dentist and other retail agglomeration areas and lastly amongst dentists.
+Finding that most dentist are either located close to a City, Central Business District or a shopping mall.
+Additionally, dentist also located close to each other making some sort of industrial cluster.
+Supporting, Marshall's agglomeration theory on knowledge spillovers, increasing the sills to attract more patients.
+
+Furthermore, when using the dentist income (y) and comparing the distance from the mall (x), signs of patterns emerge showing that income is greater when the dentist is placed closer to the shopping mall.
+Furthermore, decreasing as the distance gets bigger.
+Faster transportation can increase convenience of commuting, increasing rent commuters from the city centre are willing to pay, and therefore increasing the area of developed land without this being necessary corresponding to an increase in population.
+Hence supporting findings; when the distance reach around 10km from the mall the income starts to increase before it decrease again around 20km.
+Also in line with the Keynesian theory suggesting that this pattern might take place as the transportation cost for individuals further away from the Shopping mall does not increase to much by travelling the extra distance.
+Hotelling also describes this case where the consumer are willing to travel further to reach a certain central place.
+
+\
+\
+
+The size of the mall also has a positive effect on revenue for dentist practice, as larger malls tends to have have positive effect on the revenue.
+Larger malls gives the customer more options to choose from and are often placed closer to a larger CBD which might be more attractive for customers to visit, and then also explaining why customers could be more interested in traveling further to visit these malls instead of visiting the local mall in a smaller CBD.
+
+ 
+
+More so, the reasoning for a more profitable business close to a shopping malls can be explain by customers beeing able to combine their dentis visit with shopping afterwards, maybe in a way to threat them self.
+You can find some similiarities in marketing strategies for grocery stores in the sense where they alwyas have a well planned system of where all their products are.
+Where for example gums and grab and go snacks, will always be placed next to the cashier.
+these are usually cheap, small and quick to consume, and something that you dont usually look for, but since you are already there, you might aswell.
+Same thoughts goes for people who visit the dentists in or fairly close to a mall.
+they are already there and might aswell be done with their shopping.
+This tradeoff can be highly beneficial for the mall itself, considering the patients going to the dentists then also become customers of the mall by default.
+
+\
+According to the Alons's model dentist should locate close to the CBD for higher volume of sales.
+Dentist being placed further out in to other retail agglomeration areas can also be a good strategy.
+However, the dentist would then rely on the area having less competition so the rate between competition and population density are proportional.
+Our findings in QGIS shows that in areas of high population density, the number of dentist also increase.
+The consumer/patient then has more to choose between and the dentist also has a bigger scale of potential customers.
+Where in smaller areas it is less competition and the dentist would appear to have somewhat of a monopoly since the transportation cost to the second closes dentist are noticeable higher.
+
+Findings suggest that locating further away from a CBD has a positive effect on the revenue for dentist and also that moving further away from the competition has a negative effect on revenue.
+These findings could come across as surprising at first, but taking in ti comparison that some of the CBD´s obtained from QGIS could be categorized as relatively small, one explanation to this would possibly be that the data contains a larger number of smaller CBD´s with fewer dentist offices that also has less potential customers and a weaker income which pulls the result in one direction.
+The fact that the population density (X_sum) also shows a positive effect on the revenue strengthen this theory.
+Areas with a higher population density tends to increase the revenue for dentist.
+
+\
+Furthermore, being aware of the fact that going to the dentist is a public services and most people get assigned to their closest dentist based on their living address.
+This also takes away some of the competition and would support placement in more rural areas.
+More-so, is important to notice that when passed 18 years of age, you could risk loosing your local public dentist due to lack of capacity.
+Suggesting some dentist might seek closer to CBD areas to capture most of the remaining part of the population.
+Business, public places and industry can have a positive effect on revenue since this is areas where most of the population spends their time during their day, either going to work, school and other errand.
+Reducing the transportation cost for the customer as they are already located in these areas even if they do not live here.
+
+The bid rent models are under the assumption that Dentists use spatial completion to maximise profit.
+Nevertheless, the cost of dental care in Norway can vary depending on a number of other factors such as the type of treatment, the location of the dental practice and the dentist experience and qualifications.
+The Norwegian Dental Association rate the average cost of check ups is between four to eight hundred Norwegian Krone's \@tannlege.
+Bertrand model also take price as competitive advantage in to consideration.
+
+Another Mashiallian point to be made could be the advantage of industry clusters.
+Taken for granted that the data on Dentist includes both "normal Dentists" and specialist.
+Where in this case a "normal dentist" would for example recommend one of their customers to go see a specialist to get braces.
+The customer would then probably prefer to go to the closes specialist.
+The access to work force in these areas would also be good and will be within the same geographic area.
+
+\
+Shopping malls have a relatively short history in Norway, with the first shopping mall opening in the late sixties.
+Prior to the most retail activities took place in the city centre.
+Furthermore, these malls typically featured a mix of shops, restaurants and entertainment options, and they were often located in suburban areas or on the outskirts of cities \@home-n.
+In resent years, there has been a trend towards larger and more comprehensive shopping malls in Norway \@home-n.
+
+However, the growth of shopping malls in Norway has not been without controversy.
+Some critics argue that the development of large shopping malls has led to the decline of traditional shopping streets and local businesses, while other raise concerns about the environmental impact of these large scale commercial developments \@kanvin2014.
+
+Information about Wine monopoly locations has also been studied in this paper.
+As the wine monopoly are anchor stores they may affect the attractiveness of the shopping mall \@kanvin2014.
+The Norwegian government regulates the placements of wine monopoly stores in shopping malls to prevent completion with town centres \@omsorgsdepartementet2022.
+More importantly, the government may take in to account the potential impact of exciting retail centres in the region.
+This regional economic approach aim to promote sustainable development and balance economic growth across the country \@kanvin2014.
+
+Findings around Wine monopoly shows a negative effect on turnover per capita in retail.
+In other words, the Wine monopoly has a bad influence for the turnover in retail.
+The explanation could be as mentioned, since Wine monopoly could be categorized as an anchor store, it drag customers from malls and areas where there is no winemonoply over to the areas and malls where a wine monopoly exist, only helping out the stores surrounding.
+Another reasoning could be that the winemonopoly drags attention away from the other shopping options, resulting in a negative effect for the turnover for other retailers.
+
+is important to notice that the municipal council is more or less in charge of where vinmonopolet is allowed to operate.
+There are several criterias and factors that are taken into consideration before anything gets approved to prevent areas to dry out.
+
+\
+
+\
+
+\
+
+\
