@@ -100,18 +100,18 @@ The study utilize a quantitative research approach, employing spacial explanator
 Geographical data was collected from locations in Norway showing all dentists, central places, retail agglomeration and other points of interest such as the government regulated wine monopoly.
 Combined with regional income data a spatial regression analyses was used to identify the factors influencing the location decisions of firms.
 
-Furthermore, the result indicates the distance to retail agglomeration areas and central places playes a significant role in the location decisions for firms.
-Firms are more likely to locate closer to these areas, which offer access to a larger customer base and lower cost of transportation.
+Furthermore, the result indicates the distance to retail agglomeration areas and central places plays a significant role in the location decisions for firms.
+Retailers are more likely to locate closer to these areas, which offer access to a larger customer base and lower cost of transportation.
 However, the results also suggest other factors, such as market size and completion also influence the location decisions for firms.
 
 The studies findings have particular implications for policy-makers, developer, and dental practises seeking to maximize profits through strategic decisions.
 By understanding the importance of proximity to retail agglomeration areas and central places, these stakeholders can make informed decisions that benefit the local economy and improve competitiveness of the region.
-Perhaps more importantly prevent agrassive retail agglomeration areas from "killing down town".
+Perhaps more importantly prevent aggressive retail agglomeration areas from "killing down town".
 
 ## Introduction
 
-Our main task in this assignment is to perform an analysis of geospatial determinants of firm activity.
-More specifically we are to focus on the Norwegian dental industry in this regard, and see how geospatial determinants such as distances to shopping malls and CBDs (Central Business Districts), as well as population density can determine dental businesses income and general financial operations.
+Our main task in this assignment is to perform an analysis of geospatial determinants of firms activity.
+More specifically we are to focus on the Norwegian dental industry in this regard, and to look in to how geospatial determinants such as distances to shopping malls and CBDs (Central Business Districts), as well as population density can determine dental businesses income and general financial operations.
 As an example, central questions in this assignment will be; "Is it more beneficial to be highly centralized in urban areas with high population density and many competitors, or is it a greater advantage to be less centralized to the advantage that the nearest competing company is considerably further away?", "Which determinants appear to be most significant for economic benefit?"
 
 The theoretical framework for this study draws on Marshall's agglomeration principles, which emphasize spatial aspects of economic growth.
@@ -126,8 +126,7 @@ Shopping malls and central places offer a continent location for dental practice
 
 The result of this study indicates that dentist's with the highest income are usually located in central places in big cities.
 The findings are in line with already exciting theories especially supporting the gravitational models and agglomeration attributes.
-?????? Proving a central location within large cities are the best location to maximize profit for Dental practices.
-???
+Proving a central location within large cities are the best location to maximize profit for Dental practices.
 
 **Hypothesis**
 
@@ -148,7 +147,7 @@ It also involves generating geographical advantages, in terms of easy or difficu
 
 Furthermore, Keynesian economics emphasizes the importance of consumer demand in driving economic growth.
 This may involve policies that involve consumer spending, such as incentives for buying local products or supporting small businesses or in this case preventing the the death of down town due to competition from shopping malls.
-Subsequently, increasing consumer demand, supporting business in a specific region.
+Subsequently, dental practices may increasing consumer demand and support business in a specific region.
 Promoting economic growth or preventing economic decline @capello2016.
 
 Harald Hotelling's locational equilibrium is determined by a logic of profit maximization whereby each producer controls its own market area.
@@ -335,13 +334,13 @@ Lastly we created 2 kilometer buffer zones around dentists and CBDs to determine
 
 After calculations in QGIS we transferred our data to RSTUDIO to do the primary statistical analysis of our data.
 The data is then merged into two different data frames.
-The first one containing Norwegian communes as the unit of observation, which includes geometric commune centers to the nearest mall, the retail per capita per commune, the different commune numbers and the size of the nearest mall, including the true/ false "Winemonopoly" variable.
+The first one containing Norwegian communes as the unit of observation, which includes geometric commune centres to the nearest mall, the retail per capita per commune, the different commune numbers and the size of the nearest mall, including the true/ false "Wine monopoly" variable.
 The second data frame use dentists as the unit of observations.
-This data frame include data on the distances from CBD to dentists, distances from dentists to the nearest mall, including variables of the mall size and the "Winemonopoly" variable, different significant accounting figures for the different dentist businesses, such as total sales revenue and EBIT (Earnings Before Interests and Taxes).
+This data frame include data on the distances from CBD to dentists, distances from dentists to the nearest mall, including variables of the mall size and the "Wine monopoly" variable, different significant accounting figures for the different dentist businesses, such as total sales revenue and EBIT (Earnings Before Interests and Taxes).
 A summary of all the different variables can be found in @tbl-1, @tbl-2, @tbl-3 and @tbl-4.
 
-To obtain a first impression and a simple understanding of our data, we have decided to make use of scatterplots.
-The scatterplot presented in @fig-1 show the relationship of average spending on retail amongst inhabitants and the distance from geometrical commune centers to nearest malls, which indicate that most malls are in a 50 km radius of commune centers, and that Norwegians on average spend between 50 thousand to 120 thousand on retail.
+To obtain a first impression and a simple understanding of our data, we have decided to make use of scatter-plots.
+The scatter-plot presented in @fig-1 show the relationship of average spending on retail amongst inhabitants and the distance from geometrical commune centres to nearest malls, which indicate that most malls are in a 50 km radius of commune centres, and that Norwegians on average spend between 50 thousand to 120 thousand on retail.
 
 We furthermore have used plots to look at the relationship between the income of dentist's businesses and the distance from CBDs.
 The scatterplot in @fig-2 have some extreme figures of 1 billion+ income which we choose to ignore and deem as outliers, as we notice that these observations are accounting figures for an entire group of companies under the same legal name, and not individual companies.
@@ -349,6 +348,14 @@ By ignoring these outliers we are then left with the scatterplot in @fig-3.
 This plot shows a tendency of a negative relationship between the variables, which might suggest that dentists might earn more closer to CBDs.
 The last scatterplots we have chosen to calculate is concerning the relationship of dentists EBIT which is earnings before interest and taxes, compared to their distances to the nearest shopping mall in @fig-4.
 Just as the previous scatterplot, we also see here a tendency of a negative relationship between the variables.
+
+Furthermore, plots were used to look at the relationship between the income of dentist's businesses and the distance from CBDs.
+The scatter-plot in @fig-2 have some extreme figures of 1 billion+ income which we choose to ignore and deem as outliers, as we notice that these observations are accounting figures for an entire group of companies under the same legal name, and not individual companies.
+By ignoring these outliers we are then left with the scatter-plot in @fig-3.
+This plot shows a tendency of a negative relationship between the variables, which might suggest that dentists might earn more closer to CBDs.
+The last scatter-plots we have chosen to calculate is concerning the relationship of dentists EBIT which is earnings before interest and taxes, compared to their distances to the nearest shopping mall in @fig-4.
+Just as the previous scatter-plot, we also see here a tendency of a negative relationship between the variables.
+
 A decent number of dentists run at a loss, having negative earnings before interest and taxes.
 
 ## **Econometric Approach**
@@ -356,21 +363,21 @@ A decent number of dentists run at a loss, having negative earnings before inter
 The questions addressed are related to the geographical space of Norway.
 Norway is a country with relatively small population and large heterogeneous land area.
 Furthermore, the population is decentralized with the majority of population living in urban areas.
-This unique spatial distribution of land might give a possible explanation to diversions from the simple theoretical models used in this paper.
-Whereas one of the assumptions are homogeneous landscape.
-Nevertheless, the way economies are organised comes partly from the emergence of centralities within a city.
+Despite this unique spatial distribution of land the simple theoretical models used in this paper the results show similar patterns.
+Nevertheless, one of the assumptions are homogeneous landscape.
+However, the way economies are organised comes partly from the emergence of centralities within a city.
 Transportation networks have the potential to increase sprawl depending on how the urban system evolves gradually.
 
 The results from the bid rent configuration from the city centre gave the opportunity to explore other locations in each municipality's.
 Having an urban system of multiple centres and applying the same logic of the model to other retail agglomeration areas.
 Resulting in finding relationships based on three different types of distance measurements.
-Firstly, the distance between Dental Practice and CBD then, dentist and other retail agglomeration areas and lastly amongst dentists.
+Firstly, the distance between Dental Practice and CBD then, dentist and other retail agglomeration areas.
 Finding that most dentist are either located close to a City, Central Business District or a shopping mall.
 Additionally, dentist also located close to each other making some sort of industrial cluster.
-Supporting, Marshall's agglomeration theory on knowledge spillovers, increasing the sills to attract more patients.
+Furthermore, supporting Marshall's agglomeration theory on knowledge spillovers, increasing the sills to attract more patients.
 
-Furthermore, when using the dentist income (y) and comparing the distance from the mall (x), signs of patterns emerge showing that income is greater when the dentist is placed closer to the shopping mall.
-Furthermore, decreasing as the distance gets bigger.
+When using the dentist income (y) and comparing the distance from the mall (x), signs of patterns emerge showing that income is greater when the dentist is placed closer to the shopping mall.
+Furthermore, decreasing as the distance increase.
 Faster transportation can increase convenience of commuting, increasing rent commuters from the city centre are willing to pay, and therefore increasing the area of developed land without this being necessary corresponding to an increase in population.
 Hence supporting findings; when the distance reach around 10km from the mall the income starts to increase before it decrease again around 20km.
 Also in line with the Keynesian theory suggesting that this pattern might take place as the transportation cost for individuals further away from the Shopping mall does not increase to much by travelling the extra distance.
@@ -392,7 +399,7 @@ According to the Alons's model dentist should locate close to the CBD for higher
 Dentist being placed further out in to other retail agglomeration areas can also be a good strategy.
 However, the dentist would then rely on the area having less competition so the rate between competition and population density are proportional.
 Our findings in QGIS shows that in areas of high population density, the number of dentist also increase.
-The consumer/patient then has more to choose between and the dentist also has a bigger scale of potential customers.
+The consumer/patient then has more dentists to choose from and the dentist also has a larger scale of potential customers.
 Where in smaller areas it is less competition and the dentist would appear to have somewhat of a monopoly since the transportation cost to the second closes dentist are noticeable higher.
 
 Findings suggest that locating further away from a CBD has a positive effect on the revenue for dentist and also that moving further away from the competition has a negative effect on revenue.
@@ -403,8 +410,8 @@ Areas with a higher population density tends to increase the revenue for dentist
 \
 Furthermore, being aware of the fact that going to the dentist is a public services and most people get assigned to their closest dentist based on their living address.
 This also takes away some of the competition and would support placement in more rural areas.
-More-so, is important to notice that when passed 18 years of age, you could risk loosing your local public dentist due to lack of capacity.
-Suggesting some dentist might seek closer to CBD areas to capture most of the remaining part of the population.
+Dispute this the findings still support the Marshallian agglomeration attributes and bid-rent placement theory of central location.
+Nevertheless, some dentist seek closer to CBD areas to capture most of the remaining part of the population.
 Business, public places and industry can have a positive effect on revenue since this is areas where most of the population spends their time during their day, either going to work, school and other errand.
 Reducing the transportation cost for the customer as they are already located in these areas even if they do not live here.
 
@@ -420,7 +427,7 @@ The customer would then probably prefer to go to the closes specialist.
 The access to work force in these areas would also be good and will be within the same geographic area.
 
 Shopping malls have a relatively short history in Norway, with the first shopping mall opening in the late sixties.
-Prior to the most retail activities took place in the city centre.
+Prior to this most retail activities took place in the city centre.
 Furthermore, these malls typically featured a mix of shops, restaurants and entertainment options, and they were often located in suburban areas or on the outskirts of cities @home-n.
 In resent years, there has been a trend towards larger and more comprehensive shopping malls in Norway @home-n.
 
