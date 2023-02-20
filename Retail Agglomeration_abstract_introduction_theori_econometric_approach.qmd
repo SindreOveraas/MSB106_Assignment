@@ -463,7 +463,7 @@ huxreg(list("Dentist Revenue" = lm1), statistics = c(N = "nobs", R2 = "r.squared
 
 There are several critical factors that effect the income for dental practice where our result shows that the income tends to be higher located close to a mall or inside the mall itself.
 A larger mall also has a positive effect of the income.
-Theorys crated by Marshall, Alonso and Keynesian helps us explain some of our findings on why malls shows a pattern to be a better location for dental practice and why there are certain areas where there is a cluster of dentist.
+Theory´s crated by Marshall, Alonso and Keynesian helps us explain some of our findings on why malls shows a pattern to be a better location for dental practice and why there are certain areas where there is a cluster of dentist.
 However, it is important to notice that a high revenue does not equal good economic results as more populated and central areas tends to have higher fees for example rent.
 The Wine monopoly also appears to have negative effect on turnover per capita in retail.
 
